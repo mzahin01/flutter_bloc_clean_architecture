@@ -20,29 +20,27 @@ class CreateProductPage extends StatelessWidget {
     required this.ctx,
   });
 
-  void _createProduct(BuildContext context) {
+  Future<void> _createProduct(BuildContext context) async {
     primaryFocus?.unfocus();
     final formBloc = context.read<ProductFormBloc>().state;
     if (formBloc.isValid) {
       final network = getIt<NetworkInfo>();
-      network.checkIsConnected.then(
-        (value) {
-          if (value) {
-            context.read<ProductBloc>().add(
-                  CreateProductEvent(
-                    name: formBloc.name.trim(),
-                    price: int.parse(formBloc.price.trim()),
-                  ),
-                );
-          } else {
-            appSnackBar(
-              context,
-              Colors.red,
-              "tidak_ada_internet".tr(),
+      final isConnected = await network.checkIsConnected;
+      if (!context.mounted) return;
+      if (isConnected) {
+        context.read<ProductBloc>().add(
+              CreateProductEvent(
+                name: formBloc.name.trim(),
+                price: int.parse(formBloc.price.trim()),
+              ),
             );
-          }
-        },
-      );
+      } else {
+        appSnackBar(
+          context,
+          Colors.red,
+          "tidak_ada_internet".tr(),
+        );
+      }
     }
   }
 

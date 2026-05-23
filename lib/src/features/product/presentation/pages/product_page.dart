@@ -40,32 +40,33 @@ class _HomePageState extends State<HomePage> {
     _productBloc = getIt<ProductBloc>()..add(GetProductListEvent());
     final network = getIt<NetworkInfo>();
     _timer = Timer.periodic(const Duration(seconds: 5), (_) {
-      _checkInternetConnection(network);
+      unawaited(_checkInternetConnection(network));
     });
 
     super.initState();
   }
 
-  void _checkInternetConnection(NetworkInfo network) {
-    network.checkIsConnected.then((event) {
-      if (network.getIsConnected != event) {
-        if (event && !network.getIsConnected) {
-          appSnackBar(
-            context,
-            Colors.green,
-            "ada_internet".tr(),
-          );
-          _productBloc.add(GetProductListEvent());
-        } else {
-          appSnackBar(
-            context,
-            Colors.red,
-            "tidak_ada_internet".tr(),
-          );
-        }
+  Future<void> _checkInternetConnection(NetworkInfo network) async {
+    final event = await network.checkIsConnected;
+    if (!mounted) return;
+
+    if (network.getIsConnected != event) {
+      if (event && !network.getIsConnected) {
+        appSnackBar(
+          context,
+          Colors.green,
+          "ada_internet".tr(),
+        );
+        _productBloc.add(GetProductListEvent());
+      } else {
+        appSnackBar(
+          context,
+          Colors.red,
+          "tidak_ada_internet".tr(),
+        );
       }
-      network.setIsConnected = event;
-    });
+    }
+    network.setIsConnected = event;
   }
 
   @override
@@ -97,16 +98,17 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  void _logout(BuildContext context) {
-    showDialog<bool>(
+  Future<void> _logout(BuildContext context) async {
+    final shouldLogout = await showDialog<bool>(
       barrierDismissible: false,
       context: context,
       builder: (_) => AppDialog(title: "pesan_keluar".tr()),
-    ).then(
-      (value) => value ?? false
-          ? context.read<AuthBloc>().add(AuthLogoutEvent())
-          : null,
     );
+
+    if (!context.mounted) return;
+    if (shouldLogout ?? false) {
+      context.read<AuthBloc>().add(AuthLogoutEvent());
+    }
   }
 
   @override
@@ -196,14 +198,14 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             body: RefreshIndicator(
-              onRefresh: () {
-                return Future.delayed(
+              onRefresh: () async {
+                await Future.delayed(
                   const Duration(seconds: 1),
-                ).then(
-                  (value) => context.read<ProductBloc>().add(
-                        GetProductListEvent(),
-                      ),
                 );
+                if (!context.mounted) return;
+                context.read<ProductBloc>().add(
+                      GetProductListEvent(),
+                    );
               },
               child: const ProductDataWidget(),
             ),

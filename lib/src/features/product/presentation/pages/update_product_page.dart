@@ -23,30 +23,28 @@ class UpdateProductPage extends StatelessWidget {
     required this.productParams,
   });
 
-  void _updateProduct(BuildContext context) {
+  Future<void> _updateProduct(BuildContext context) async {
     primaryFocus?.unfocus();
     final formBloc = context.read<ProductFormBloc>().state;
     if (formBloc.isValid) {
       final network = getIt<NetworkInfo>();
-      network.checkIsConnected.then(
-        (value) {
-          if (value) {
-            context.read<ProductBloc>().add(
-                  UpdateProductEvent(
-                    productId: productParams.productId,
-                    name: formBloc.name.trim(),
-                    price: int.parse(formBloc.price.trim()),
-                  ),
-                );
-          } else {
-            appSnackBar(
-              context,
-              Colors.red,
-              "tidak_ada_internet".tr(),
+      final isConnected = await network.checkIsConnected;
+      if (!context.mounted) return;
+      if (isConnected) {
+        context.read<ProductBloc>().add(
+              UpdateProductEvent(
+                productId: productParams.productId,
+                name: formBloc.name.trim(),
+                price: int.parse(formBloc.price.trim()),
+              ),
             );
-          }
-        },
-      );
+      } else {
+        appSnackBar(
+          context,
+          Colors.red,
+          "tidak_ada_internet".tr(),
+        );
+      }
     }
   }
 

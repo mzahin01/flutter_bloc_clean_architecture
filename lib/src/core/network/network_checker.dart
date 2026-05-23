@@ -1,4 +1,5 @@
 import 'package:fpdart/fpdart.dart';
+import 'package:flutter/foundation.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 import '../errors/failures.dart';
@@ -24,7 +25,7 @@ class NetworkInfo {
   }
 
   Future<bool> get checkIsConnected async =>
-      await _connectionChecker.hasConnection;
+      kIsWeb ? true : await _connectionChecker.hasConnection;
 
   set setIsConnected(bool val) => _isConnected = val;
 

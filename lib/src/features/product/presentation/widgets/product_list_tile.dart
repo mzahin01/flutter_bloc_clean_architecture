@@ -18,19 +18,20 @@ class ProductDataWidget extends StatelessWidget {
     BuildContext context,
     String productId,
   ) async {
-    await showDialog<bool>(
+    final shouldDelete = await showDialog<bool>(
       barrierDismissible: false,
       context: context,
       builder: (_) => AppDialog(title: "pesan_hapus_produk".tr()),
-    ).then(
-      (value) => value ?? false
-          ? context.read<ProductBloc>().add(
-                DeleteProductEvent(
-                  productId: productId,
-                ),
-              )
-          : null,
     );
+
+    if (!context.mounted) return;
+    if (shouldDelete ?? false) {
+      context.read<ProductBloc>().add(
+            DeleteProductEvent(
+              productId: productId,
+            ),
+          );
+    }
   }
 
   Widget _priceChip(int price) {

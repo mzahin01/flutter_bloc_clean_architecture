@@ -1,0 +1,6311 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+android/
+  app/
+    src/
+      debug/
+        AndroidManifest.xml
+      main/
+        kotlin/
+          com/
+            example/
+              flutter_bloc_ca/
+                MainActivity.kt
+        res/
+          drawable/
+            launch_background.xml
+          drawable-v21/
+            launch_background.xml
+          mipmap-hdpi/
+            ic_launcher.png
+          mipmap-mdpi/
+            ic_launcher.png
+          mipmap-xhdpi/
+            ic_launcher.png
+          mipmap-xxhdpi/
+            ic_launcher.png
+          mipmap-xxxhdpi/
+            ic_launcher.png
+          values/
+            styles.xml
+          values-night/
+            styles.xml
+        AndroidManifest.xml
+      profile/
+        AndroidManifest.xml
+    build.gradle
+  gradle/
+    wrapper/
+      gradle-wrapper.properties
+  .gitignore
+  build.gradle
+  gradle.properties
+  settings.gradle
+assets/
+  translations/
+    en-US.json
+    id-ID.json
+lib/
+  src/
+    configs/
+      adapter/
+        adapter_conf.dart
+        adapter.dart
+      injector/
+        injector_conf.dart
+        injector.dart
+    core/
+      api/
+        api_exception.dart
+        api_helper.dart
+        api_interceptor.dart
+        api_url.dart
+      blocs/
+        theme/
+          theme_bloc.dart
+          theme_event.dart
+          theme_state.dart
+        translate/
+          translate_bloc.dart
+          translate_event.dart
+          translate_state.dart
+      cache/
+        hive_local_storage.dart
+        local_storage.dart
+        secure_local_storage.dart
+      constants/
+        error_message.dart
+        list_translation_locale.dart
+      errors/
+        exceptions.dart
+        failures.dart
+      extensions/
+        integer_sizedbox_extension.dart
+        string_validator_extension.dart
+      network/
+        network_checker.dart
+      themes/
+        app_color.dart
+        app_font.dart
+        app_theme.dart
+      usecases/
+        usecase.dart
+      utils/
+        failure_converter.dart
+        logger.dart
+        observer.dart
+        regex_validator.dart
+    features/
+      auth/
+        data/
+          datasources/
+            auth_local_datasource.dart
+            auth_remote_datasource.dart
+          models/
+            adapter/
+              user_adapter_model.dart
+            login_model.dart
+            register_model.dart
+            user_model.dart
+          repositories/
+            auth_repository_impl.dart
+        di/
+          auth_depedency.dart
+        domain/
+          entities/
+            user_entity.dart
+          repositories/
+            auth_repository.dart
+          usecases/
+            check_signin_status_usecase.dart
+            login_usecase.dart
+            logout_usecase.dart
+            register_usecase.dart
+            usecase_params.dart
+        presentation/
+          bloc/
+            auth/
+              auth_bloc.dart
+              auth_event.dart
+              auth_state.dart
+            auth_login_form/
+              auth_login_form_bloc.dart
+              auth_login_form_event.dart
+              auth_login_form_state.dart
+            auth_register_form/
+              auth_register_form_bloc.dart
+              auth_register_form_event.dart
+              auth_register_form_state.dart
+          pages/
+            auth_page.dart
+            login_page.dart
+            register_page.dart
+          widgets/
+            auth_login_input.dart
+            auth_register_input.dart
+            auth_text_field.dart
+      product/
+        data/
+          datasources/
+            product_local_datasource.dart
+            product_remote_datasource.dart
+          models/
+            create_product_model.dart
+            delete_product_model.dart
+            get_product_model.dart
+            models.dart
+            update_product_model.dart
+          repositories/
+            product_repository_impl.dart
+        di/
+          product_depedency.dart
+        domain/
+          entities/
+            product_entity.dart
+          repositories/
+            product_repository.dart
+          usecases/
+            create_product_usecase.dart
+            delete_product_usecase.dart
+            get_product_list_usecase.dart
+            update_product_usecase.dart
+            usecase_params.dart
+        presentation/
+          bloc/
+            product/
+              product_bloc.dart
+              product_event.dart
+              product_state.dart
+            product_form/
+              product_form_bloc.dart
+              product_form_event.dart
+              product_form_state.dart
+          pages/
+            create_product_page.dart
+            product_page.dart
+            update_product_page.dart
+          widgets/
+            create_product_input.dart
+            product_list_tile.dart
+            product_text_field.dart
+            update_product_input.dart
+    routes/
+      app_route_conf.dart
+      app_route_path.dart
+      routes.dart
+    widgets/
+      button_widget.dart
+      dialog_widget.dart
+      error_widget.dart
+      leading_back_button_widget.dart
+      loading_widget.dart
+      snackbar_widget.dart
+    app.dart
+  main.dart
+test/
+  widget_test.dart
+web/
+  icons/
+    Icon-192.png
+    Icon-512.png
+    Icon-maskable-192.png
+    Icon-maskable-512.png
+  favicon.png
+  index.html
+  manifest.json
+.gitignore
+.metadata
+analysis_options.yaml
+pubspec.lock
+pubspec.yaml
+README.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="test/widget_test.dart">
+// This is a basic Flutter widget test.
+//
+// To perform an interaction with a widget in your test, use the WidgetTester
+// utility in the flutter_test package. For example, you can send tap and scroll
+// gestures. You can also use WidgetTester to find child widgets in the widget
+// tree, read text, and verify that the values of widget properties are correct.
+
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+void main() {
+  testWidgets('Smoke test', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(
+          body: Text('ok'),
+        ),
+      ),
+    );
+
+    expect(find.text('ok'), findsOneWidget);
+  });
+}
+</file>
+
+<file path="web/index.html">
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="flutter_bloc_ca">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>flutter_bloc_ca</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
+</file>
+
+<file path="web/manifest.json">
+{
+    "name": "flutter_bloc_ca",
+    "short_name": "flutter_bloc_ca",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "A new Flutter project.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
+</file>
+
+<file path="android/app/src/debug/AndroidManifest.xml">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+</file>
+
+<file path="android/app/src/main/kotlin/com/example/flutter_bloc_ca/MainActivity.kt">
+package com.example.flutter_bloc_ca
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
+</file>
+
+<file path="android/app/src/main/res/drawable/launch_background.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+
+    <!-- You can insert your own image assets here -->
+    <!-- <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item> -->
+</layer-list>
+</file>
+
+<file path="android/app/src/main/res/drawable-v21/launch_background.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="?android:colorBackground" />
+
+    <!-- You can insert your own image assets here -->
+    <!-- <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item> -->
+</layer-list>
+</file>
+
+<file path="android/app/src/main/res/values/styles.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is off -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+</file>
+
+<file path="android/app/src/main/res/values-night/styles.xml">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is on -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+</file>
+
+<file path="android/app/src/main/AndroidManifest.xml">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="flutter_bloc_ca"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+</manifest>
+</file>
+
+<file path="android/app/src/profile/AndroidManifest.xml">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+</file>
+
+<file path="android/app/build.gradle">
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+android {
+    namespace "com.example.flutter_bloc_ca"
+    compileSdkVersion flutter.compileSdkVersion
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.example.flutter_bloc_ca"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
+        minSdkVersion 22
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+</file>
+
+<file path="android/gradle/wrapper/gradle-wrapper.properties">
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-7.5-all.zip
+</file>
+
+<file path="android/.gitignore">
+gradle-wrapper.jar
+/.gradle
+/captures/
+/gradlew
+/gradlew.bat
+/local.properties
+GeneratedPluginRegistrant.java
+
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/docs/deployment/android#reference-the-keystore-from-the-app
+key.properties
+**/*.keystore
+**/*.jks
+</file>
+
+<file path="android/build.gradle">
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+</file>
+
+<file path="android/settings.gradle">
+include ':app'
+
+def localPropertiesFile = new File(rootProject.projectDir, "local.properties")
+def properties = new Properties()
+
+assert localPropertiesFile.exists()
+localPropertiesFile.withReader("UTF-8") { reader -> properties.load(reader) }
+
+def flutterSdkPath = properties.getProperty("flutter.sdk")
+assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
+apply from: "$flutterSdkPath/packages/flutter_tools/gradle/app_plugin_loader.gradle"
+</file>
+
+<file path="assets/translations/en-US.json">
+{
+  "judul": "Flutter Clean Architecture with BloC State Management",
+  "masuk": "Login",
+  "daftar": "Register",
+  "tambah_produk": "Add Product",
+  "ubah_produk": "Edit Product",
+  "input_nama_produk": "Insert product name",
+  "input_harga_produk": "Insert product price",
+  "pesan_keluar": "Are you sure want to exit?",
+  "pesan_hapus_produk": "Are you sure want to delete this product?",
+  "tombol_ya": "Yes",
+  "tombol_tidak": "Cancel",
+  "hai": "Hey {}!",
+  "input_email": "Email",
+  "input_nama_pengguna": "Username",
+  "input_kata_sandi": "Password",
+  "input_konfirmasi_kata_sandi": "Confirm Password",
+  "tidak_ada_internet": "No internet connection",
+  "ada_internet": "Internet connection available",
+  "murah": "Cheap",
+  "sedang": "Medium",
+  "mahal": "Expensive",
+  "validasi_produk": "{} mininum 4 characters",
+  "nama_produk": "Product name",
+  "harga_produk": "Product price"
+}
+</file>
+
+<file path="assets/translations/id-ID.json">
+{
+  "judul": "Flutter Clean Architecture dengan State Management BLoC",
+  "masuk": "Masuk",
+  "daftar": "Daftar",
+  "tambah_produk": "Tambah Produk",
+  "ubah_produk": "Ubah Produk",
+  "input_nama_produk": "Masukkan nama produk",
+  "input_harga_produk": "Masukkan harga produk",
+  "pesan_keluar": "Apakah anda yakin ingin keluar?",
+  "pesan_hapus_produk": "Apakah anda yakin ingin menghapus produk ini?",
+  "tombol_ya": "Ya",
+  "tombol_tidak": "Batal",
+  "hai": "Hai {}!",
+  "input_email": "Email",
+  "input_nama_pengguna": "Nama Pengguna",
+  "input_kata_sandi": "Kata Sandi",
+  "input_konfirmasi_kata_sandi": "Konfirmasi Kata Sandi",
+  "tidak_ada_internet": "Tidak ada koneksi internet",
+  "ada_internet": "Koneksi internet tersedia",
+  "murah": "Murah",
+  "sedang": "Sedang",
+  "mahal": "Mahal",
+  "validasi_produk": "{} minimal 4 karakter",
+  "nama_produk": "Nama produk",
+  "harga_produk": "Harga produk"
+}
+</file>
+
+<file path="lib/src/configs/adapter/adapter_conf.dart">
+import 'package:hive_flutter/hive_flutter.dart';
+
+import 'adapter.dart';
+
+void configureAdapter() {
+  Hive.registerAdapter(UserAdapter());
+}
+</file>
+
+<file path="lib/src/configs/adapter/adapter.dart">
+export '../../features/auth/data/models/adapter/user_adapter_model.dart';
+</file>
+
+<file path="lib/src/configs/injector/injector_conf.dart">
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:get_it/get_it.dart';
+import 'package:dio/dio.dart';
+
+import 'injector.dart';
+
+final getIt = GetIt.I;
+
+void configureDepedencies() {
+  AuthDepedency.init();
+  ProductDependency.init();
+
+  getIt.registerLazySingleton(
+    () => ThemeBloc(),
+  );
+
+  getIt.registerLazySingleton(
+    () => TranslateBloc(),
+  );
+
+  getIt.registerLazySingleton(
+    () => AppRouteConf(),
+  );
+
+  getIt.registerLazySingleton(
+    () => ApiHelper(
+      getIt<Dio>(),
+    ),
+  );
+
+  getIt.registerLazySingleton(
+    () => Dio()
+      ..interceptors.add(
+        getIt<ApiInterceptor>(),
+      ),
+  );
+
+  getIt.registerLazySingleton(
+    () => ApiInterceptor(),
+  );
+
+  getIt.registerLazySingleton(
+    () => SecureLocalStorage(
+      getIt<FlutterSecureStorage>(),
+    ),
+  );
+
+  getIt.registerLazySingleton(
+    () => HiveLocalStorage(),
+  );
+
+  getIt.registerLazySingleton(
+    () => NetworkInfo(
+      getIt<InternetConnectionChecker>(),
+    ),
+  );
+
+  getIt.registerLazySingleton(
+    () => InternetConnectionChecker(),
+  );
+
+  getIt.registerLazySingleton(
+    () => const FlutterSecureStorage(),
+  );
+}
+</file>
+
+<file path="lib/src/configs/injector/injector.dart">
+export '../../features/product/di/product_depedency.dart';
+export '../../features/auth/di/auth_depedency.dart';
+export '../../core/blocs/translate/translate_bloc.dart';
+export '../../core/blocs/theme/theme_bloc.dart';
+export '../../core/cache/secure_local_storage.dart';
+export '../../core/cache/hive_local_storage.dart';
+export '../../core/network/network_checker.dart';
+export '../../core/api/api_interceptor.dart';
+export '../../core/api/api_helper.dart';
+export '../../routes/app_route_conf.dart';
+</file>
+
+<file path="lib/src/core/api/api_exception.dart">
+class ApiException implements Exception {
+  final String message;
+  final String prefix;
+
+  ApiException([this.message = "", this.prefix = ""]);
+
+  @override
+  String toString() {
+    return "$prefix$message";
+  }
+}
+
+class FetchDataException extends ApiException {
+  FetchDataException(String message)
+      : super(message, "Error During Communication: ");
+}
+
+class BadRequestException extends ApiException {
+  BadRequestException(String message) : super(message, "Invalid Request: ");
+}
+
+class UnauthorizedException extends ApiException {
+  UnauthorizedException(String message) : super(message, "Unauthorized: ");
+}
+
+class ForbiddenException extends ApiException {
+  ForbiddenException(String message) : super(message, "Forbidden: ");
+}
+
+class NotFoundException extends ApiException {
+  NotFoundException(String message) : super(message, "Not Found: ");
+}
+
+class InternalServerException extends ApiException {
+  InternalServerException(String message) : super(message, "Internal Server: ");
+}
+
+class UnprocessableContentException extends ApiException {
+  UnprocessableContentException(String message)
+      : super(message, "Unprocessable Content: ");
+}
+
+class InvalidInputException extends ApiException {
+  InvalidInputException(String message) : super(message, "Invalid Input: ");
+}
+</file>
+
+<file path="lib/src/core/api/api_helper.dart">
+import 'dart:io';
+
+import 'package:dio/dio.dart';
+
+import 'api_exception.dart';
+
+class ApiHelper {
+  final Dio _dio;
+  const ApiHelper(this._dio);
+
+  Future<Map<String, dynamic>> execute({
+    required Method method,
+    required String url,
+    dynamic data,
+  }) async {
+    try {
+      Response? response;
+      switch (method) {
+        case Method.get:
+          response = await _dio.get(url);
+          break;
+        case Method.post:
+          response = await _dio.post(url);
+          break;
+        case Method.put:
+          response = await _dio.put(url);
+          break;
+        case Method.patch:
+          response = await _dio.patch(url);
+          break;
+        case Method.delete:
+          response = await _dio.delete(url);
+          break;
+      }
+
+      return _returnResponse(response);
+    } on SocketException {
+      throw FetchDataException('No Internet connection');
+    } on DioException catch (e) {
+      return _returnResponse(e.response!);
+    }
+  }
+
+  Map<String, dynamic> _returnResponse(Response response) {
+    switch (response.statusCode) {
+      case 200:
+        return response.data;
+      case 201:
+        return response.data;
+      case 400:
+        throw BadRequestException(response.data["message"].toString());
+      case 401:
+        throw UnauthorizedException(response.data["message"].toString());
+      case 403:
+        throw ForbiddenException(response.data["message"].toString());
+      case 404:
+        throw NotFoundException(response.data["message"].toString());
+      case 422:
+        throw UnprocessableContentException(
+            response.data["message"].toString());
+      case 500:
+        throw InternalServerException(response.data["message"].toString());
+      default:
+        throw FetchDataException(
+            'Error occured while Communication with Server with StatusCode : ${response.statusCode}');
+    }
+  }
+}
+
+enum Method { get, post, put, patch, delete }
+</file>
+
+<file path="lib/src/core/api/api_interceptor.dart">
+import 'package:dio/dio.dart';
+
+import '../utils/logger.dart';
+import 'api_url.dart';
+
+class ApiInterceptor extends Interceptor {
+  @override
+  void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
+    options.baseUrl = ApiUrl.baseUrl;
+    super.onRequest(options, handler);
+  }
+
+  @override
+  void onError(DioException err, ErrorInterceptorHandler handler) {
+    logger.e(err.response?.statusCode);
+    super.onError(err, handler);
+  }
+}
+</file>
+
+<file path="lib/src/core/api/api_url.dart">
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+class ApiUrl {
+  const ApiUrl._();
+
+  static const baseUrl = "https://....com/api/v1";
+
+  // static const products = "/products";
+  static final products = FirebaseFirestore.instance.collection("products");
+  static final users = FirebaseFirestore.instance.collection("users");
+}
+</file>
+
+<file path="lib/src/core/blocs/theme/theme_bloc.dart">
+import 'package:equatable/equatable.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+
+part 'theme_event.dart';
+part 'theme_state.dart';
+
+class ThemeBloc extends HydratedBloc<ThemeEvent, ThemeState> {
+  ThemeBloc() : super(const ThemeState(false)) {
+    on<LightThemeEvent>(_lightTheme);
+    on<DarkThemeEvent>(_darkTheme);
+  }
+
+  Future _lightTheme(LightThemeEvent event, Emitter emit) async {
+    emit(const ThemeState(false));
+  }
+
+  Future _darkTheme(DarkThemeEvent event, Emitter emit) async {
+    emit(const ThemeState(true));
+  }
+
+  @override
+  ThemeState? fromJson(Map<String, dynamic> json) {
+    return ThemeState.fromMap(json);
+  }
+
+  @override
+  Map<String, dynamic>? toJson(ThemeState state) {
+    return state.toMap();
+  }
+}
+</file>
+
+<file path="lib/src/core/blocs/theme/theme_event.dart">
+part of 'theme_bloc.dart';
+
+sealed class ThemeEvent extends Equatable {
+  const ThemeEvent();
+
+  @override
+  List<Object> get props => [];
+}
+
+class LightThemeEvent extends ThemeEvent {}
+
+class DarkThemeEvent extends ThemeEvent {}
+</file>
+
+<file path="lib/src/core/blocs/theme/theme_state.dart">
+part of 'theme_bloc.dart';
+
+class ThemeState extends Equatable {
+  final bool isDarkMode;
+
+  const ThemeState(this.isDarkMode);
+
+  @override
+  List<Object> get props => [isDarkMode];
+
+  factory ThemeState.fromMap(Map<String, dynamic> map) {
+    return ThemeState(
+      map["isDarkMode"],
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      "isDarkMode": isDarkMode,
+    };
+  }
+}
+</file>
+
+<file path="lib/src/core/blocs/translate/translate_bloc.dart">
+import 'package:equatable/equatable.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+
+part 'translate_event.dart';
+part 'translate_state.dart';
+
+class TranslateBloc extends HydratedBloc<TranslateEvent, TranslateState> {
+  TranslateBloc() : super(const TranslateState("id", "ID", "EN")) {
+    on<TrIndonesiaEvent>(_trIndonesia);
+    on<TrEnglishEvent>(_trEnglish);
+  }
+
+  Future _trIndonesia(TrIndonesiaEvent event, Emitter emit) async {
+    emit(TranslateState("id", "ID", state.countryCode));
+  }
+
+  Future _trEnglish(TrEnglishEvent event, Emitter emit) async {
+    emit(TranslateState("en", "EN", state.countryCode));
+  }
+
+  @override
+  TranslateState? fromJson(Map<String, dynamic> json) {
+    return TranslateState.fromMap(json);
+  }
+
+  @override
+  Map<String, dynamic>? toJson(TranslateState state) {
+    return state.toMap();
+  }
+}
+</file>
+
+<file path="lib/src/core/blocs/translate/translate_event.dart">
+part of 'translate_bloc.dart';
+
+sealed class TranslateEvent extends Equatable {
+  const TranslateEvent();
+
+  @override
+  List<Object> get props => [];
+}
+
+class TrIndonesiaEvent extends TranslateEvent {}
+
+class TrEnglishEvent extends TranslateEvent {}
+</file>
+
+<file path="lib/src/core/blocs/translate/translate_state.dart">
+part of 'translate_bloc.dart';
+
+class TranslateState extends Equatable {
+  final String languageCode;
+  final String countryCode;
+  final String previousCountryCode;
+
+  const TranslateState(
+    this.languageCode,
+    this.countryCode,
+    this.previousCountryCode,
+  );
+
+  @override
+  List<Object> get props => [
+        languageCode,
+        countryCode,
+        previousCountryCode,
+      ];
+
+  factory TranslateState.fromMap(Map<String, dynamic> map) {
+    return TranslateState(
+      map["language_code"],
+      map["country_code"],
+      map["previous_country_code"],
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      "language_code": languageCode,
+      "country_code": countryCode,
+      "previous_country_code": previousCountryCode,
+    };
+  }
+}
+</file>
+
+<file path="lib/src/core/cache/hive_local_storage.dart">
+import 'package:hive/hive.dart';
+
+import 'local_storage.dart';
+
+class HiveLocalStorage implements LocalStorage {
+  @override
+  Future<dynamic> load({required String key, String? boxName}) async {
+    await Hive.openBox(boxName!);
+    final box = Hive.box(boxName);
+    try {
+      final result = await box.get(key);
+      return result;
+    } catch (_) {
+      rethrow;
+    } finally {
+      box.close();
+    }
+  }
+
+  @override
+  Future<void> save({
+    required String key,
+    required dynamic value,
+    String? boxName,
+  }) async {
+    await Hive.openBox(boxName!);
+    final box = Hive.box(boxName);
+    try {
+      await box.put(key, value);
+
+      return;
+    } catch (_) {
+      rethrow;
+    } finally {
+      box.close();
+    }
+  }
+
+  @override
+  Future<void> delete({required String key, String? boxName}) async {
+    await Hive.openBox(boxName!);
+    final box = Hive.box(boxName);
+    try {
+      await box.delete(key);
+      return;
+    } catch (_) {
+      rethrow;
+    } finally {
+      box.close();
+    }
+  }
+}
+</file>
+
+<file path="lib/src/core/cache/local_storage.dart">
+abstract class LocalStorage {
+  Future<void> save({
+    required String key,
+    required dynamic value,
+    String? boxName,
+  });
+
+  Future<dynamic> load({
+    required String key,
+    String? boxName,
+  });
+
+  Future<void> delete({
+    required String key,
+    String? boxName,
+  });
+}
+</file>
+
+<file path="lib/src/core/cache/secure_local_storage.dart">
+import 'local_storage.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
+class SecureLocalStorage implements LocalStorage {
+  final FlutterSecureStorage _storage;
+  const SecureLocalStorage(this._storage);
+
+  @override
+  Future<String> load({required String key, String? boxName}) async {
+    final result = await _storage.read(key: key);
+
+    return result ?? "";
+  }
+
+  @override
+  Future<void> save({
+    required String key,
+    required value,
+    String? boxName,
+  }) async {
+    final result = await _storage.write(key: key, value: value);
+
+    return result;
+  }
+
+  @override
+  Future<void> delete({required String key, String? boxName}) async {
+    await _storage.delete(key: key);
+
+    return;
+  }
+}
+</file>
+
+<file path="lib/src/core/constants/error_message.dart">
+const noElement = "Bad state: No element";
+</file>
+
+<file path="lib/src/core/constants/list_translation_locale.dart">
+import 'package:flutter/widgets.dart';
+
+const englishLocale = Locale('en', 'US');
+const indonesiaLocale = Locale('id', 'ID');
+</file>
+
+<file path="lib/src/core/errors/exceptions.dart">
+class ServerException implements Exception {}
+
+class CacheException implements Exception {}
+
+class AuthException implements Exception {}
+
+class EmptyException implements Exception {}
+
+class DuplicateEmailException implements Exception {}
+</file>
+
+<file path="lib/src/core/errors/failures.dart">
+import 'package:equatable/equatable.dart';
+
+sealed class Failure extends Equatable {
+  @override
+  List<Object> get props => [];
+}
+
+class ServerFailure extends Failure {}
+
+class CacheFailure extends Failure {}
+
+class EmptyFailure extends Failure {}
+
+class CredentialFailure extends Failure {}
+
+class DuplicateEmailFailure extends Failure {}
+
+class PasswordNotMatchFailure extends Failure {}
+
+class InvalidEmailFailure extends Failure {}
+
+class InvalidPasswordFailure extends Failure {}
+</file>
+
+<file path="lib/src/core/extensions/integer_sizedbox_extension.dart">
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+extension IntegerSizedBoxExtension on int {
+  SizedBox get hS => SizedBox(height: h);
+  SizedBox get wS => SizedBox(width: h);
+}
+</file>
+
+<file path="lib/src/core/extensions/string_validator_extension.dart">
+import 'package:flutter_bloc_ca/src/core/utils/regex_validator.dart';
+
+extension StringValidatorExtension on String {
+  bool get isEmailValid => RegexValidator.email.hasMatch(this);
+  bool get isPasswordValid => RegexValidator.password.hasMatch(this);
+}
+</file>
+
+<file path="lib/src/core/network/network_checker.dart">
+import 'package:fpdart/fpdart.dart';
+import 'package:flutter/foundation.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
+
+import '../errors/failures.dart';
+
+typedef EitherNetwork<T> = Future<Either<Failure, T>> Function();
+
+class NetworkInfo {
+  final InternetConnectionChecker _connectionChecker;
+  NetworkInfo(this._connectionChecker);
+
+  bool _isConnected = true;
+
+  Future<Either<Failure, T>> check<T>({
+    required EitherNetwork<T> connected,
+    required EitherNetwork<T> notConnected,
+  }) async {
+    final isConnected = await checkIsConnected;
+    if (isConnected) {
+      return connected.call();
+    } else {
+      return notConnected.call();
+    }
+  }
+
+  Future<bool> get checkIsConnected async =>
+      kIsWeb ? true : await _connectionChecker.hasConnection;
+
+  set setIsConnected(bool val) => _isConnected = val;
+
+  bool get getIsConnected => _isConnected;
+}
+</file>
+
+<file path="lib/src/core/themes/app_color.dart">
+import 'package:flutter/material.dart';
+
+class AppColor {
+  AppColor._();
+
+  static const navy = Color(0xFF0C134F);
+  static const blue = Color(0xFF1D267D);
+  static const purple = Color(0xFF5C469C);
+  static const lightPurple = Color(0xFFD4ADFC);
+}
+</file>
+
+<file path="lib/src/core/themes/app_font.dart">
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class AppFont {
+  AppFont._();
+
+  static TextStyle normal = GoogleFonts.poppins(fontWeight: FontWeight.normal);
+  static TextStyle bold = GoogleFonts.poppins(fontWeight: FontWeight.bold);
+}
+
+extension AppFontSize on TextStyle {
+  TextStyle get s12 {
+    return copyWith(fontSize: 12.sp);
+  }
+
+  TextStyle get s14 {
+    return copyWith(fontSize: 14.sp);
+  }
+
+  TextStyle get s16 {
+    return copyWith(fontSize: 16.sp);
+  }
+}
+</file>
+
+<file path="lib/src/core/themes/app_theme.dart">
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'app_color.dart';
+import 'app_font.dart';
+
+class AppTheme {
+  AppTheme._();
+
+  static ThemeData data(bool isDark) {
+    return ThemeData(
+      brightness: isDark ? Brightness.dark : Brightness.light,
+      appBarTheme: AppBarTheme(
+        backgroundColor: isDark ? AppColor.navy : AppColor.purple,
+        centerTitle: true,
+        elevation: 2.h,
+        titleTextStyle: AppFont.bold.s16,
+      ),
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        backgroundColor: isDark ? AppColor.blue : AppColor.lightPurple,
+        foregroundColor: isDark ? Colors.white : Colors.black,
+        elevation: 2.h,
+        extendedTextStyle: AppFont.normal.s14,
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: isDark ? AppColor.blue : AppColor.lightPurple,
+          elevation: 2.h,
+          textStyle: AppFont.normal.s14,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(6.r),
+          ),
+        ),
+      ),
+      visualDensity: VisualDensity.adaptivePlatformDensity,
+      fontFamily: GoogleFonts.poppins().fontFamily,
+      textTheme: TextTheme(
+        bodySmall: AppFont.normal.s12,
+        bodyMedium: AppFont.normal.s14,
+        bodyLarge: AppFont.normal.s16,
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/core/usecases/usecase.dart">
+import 'package:equatable/equatable.dart';
+import 'package:fpdart/fpdart.dart';
+
+import '../errors/failures.dart';
+
+abstract class UseCase<T, Params> {
+  Future<Either<Failure, T>> call(Params params);
+}
+
+class NoParams extends Equatable {
+  @override
+  List<Object> get props => [];
+}
+</file>
+
+<file path="lib/src/core/utils/failure_converter.dart">
+import '../errors/failures.dart';
+
+String mapFailureToMessage(Failure failure) {
+  switch (failure.runtimeType) {
+    case ServerFailure:
+      return "Server Failure";
+    case CacheFailure:
+      return "Cache Failure";
+    case EmptyFailure:
+      return "Empty Failure";
+    case CredentialFailure:
+      return "Wrong Email or Password";
+    case DuplicateEmailFailure:
+      return "Email already taken";
+    case PasswordNotMatchFailure:
+      return "Password not match";
+    case InvalidEmailFailure:
+      return "Invalid email format";
+    case InvalidPasswordFailure:
+      return "Invalid password format";
+    default:
+      return "Unexpected error";
+  }
+}
+</file>
+
+<file path="lib/src/core/utils/logger.dart">
+import 'package:logger/logger.dart';
+
+var logger = Logger(
+  filter: null,
+  output: null,
+  printer: PrettyPrinter(
+    methodCount: 0,
+    errorMethodCount: 8,
+    lineLength: 120,
+    colors: true,
+    printEmojis: true,
+  ),
+);
+</file>
+
+<file path="lib/src/core/utils/observer.dart">
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'logger.dart';
+
+class AppBlocObserver extends BlocObserver {
+  @override
+  void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
+    logger.e(error);
+    super.onError(bloc, error, stackTrace);
+  }
+
+  @override
+  void onChange(BlocBase bloc, Change change) {
+    logger.d(change.currentState);
+    logger.d(change.nextState);
+    super.onChange(bloc, change);
+  }
+}
+</file>
+
+<file path="lib/src/core/utils/regex_validator.dart">
+class RegexValidator {
+  RegexValidator._();
+
+  static final email = RegExp(r"^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$");
+  static final password = RegExp(r"^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]+$");
+}
+</file>
+
+<file path="lib/src/features/auth/data/datasources/auth_local_datasource.dart">
+import '../../../../core/errors/exceptions.dart';
+import '../../../../core/cache/hive_local_storage.dart';
+import '../../../../core/cache/secure_local_storage.dart';
+import '../../../../core/utils/logger.dart';
+import '../../domain/entities/user_entity.dart';
+
+sealed class AuthLocalDataSource {
+  Future<UserEntity> checkSignInStatus();
+}
+
+class AuthLocalDataSourceImpl implements AuthLocalDataSource {
+  final SecureLocalStorage _secureLocalStorage;
+  final HiveLocalStorage _localStorage;
+  const AuthLocalDataSourceImpl(
+    this._secureLocalStorage,
+    this._localStorage,
+  );
+
+  @override
+  Future<UserEntity> checkSignInStatus() async {
+    try {
+      final userId = await _secureLocalStorage.load(key: "user_id");
+      final result = await _localStorage.load(key: "user", boxName: "cache");
+      if (result != null && userId.isNotEmpty) {
+        if (result is UserEntity) {
+          return result;
+        }
+      }
+
+      throw CacheException();
+    } catch (e) {
+      logger.e(e);
+      throw CacheException();
+    }
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/data/datasources/auth_remote_datasource.dart">
+import '../../../../core/api/api_url.dart';
+import '../../../../core/constants/error_message.dart';
+import '../../../../core/errors/exceptions.dart';
+import '../../../../core/utils/logger.dart';
+import '../models/login_model.dart';
+import '../models/register_model.dart';
+import '../models/user_model.dart';
+
+sealed class AuthRemoteDataSource {
+  Future<UserModel> login(LoginModel model);
+  Future<void> logout();
+  Future<void> register(RegisterModel model);
+}
+
+class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
+  @override
+  Future<UserModel> login(LoginModel model) async {
+    try {
+      final user = await _getUserByEmail(model.email ?? "");
+
+      return user;
+    } on EmptyException {
+      throw AuthException();
+    } catch (e) {
+      logger.e(e);
+      if (e.toString() == noElement) {
+        throw AuthException();
+      }
+      throw ServerException();
+    }
+  }
+
+  @override
+  Future<void> logout() async {
+    try {
+      await Future.delayed(const Duration(seconds: 1));
+      return;
+    } catch (e) {
+      logger.e(e);
+      throw ServerException();
+    }
+  }
+
+  @override
+  Future<void> register(RegisterModel model) async {
+    try {
+      final user = await _getUserByEmail(model.email ?? "");
+      if (user.email == model.email) {
+        throw DuplicateEmailException();
+      }
+
+      return;
+    } on EmptyException {
+      await ApiUrl.users.add(model.toMap());
+    } on DuplicateEmailException {
+      rethrow;
+    } catch (e) {
+      logger.e(e);
+      throw ServerException();
+    }
+  }
+
+  Future<UserModel> _getUserByEmail(String email) async {
+    try {
+      final result = await ApiUrl.users.where("email", isEqualTo: email).get();
+      final doc = result.docs.first;
+      final user = UserModel.fromJson(doc.data(), doc.id);
+
+      return user;
+    } catch (e) {
+      if (e.toString() == noElement) {
+        throw EmptyException();
+      }
+      logger.e(e);
+      throw ServerException();
+    }
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/data/models/adapter/user_adapter_model.dart">
+import 'package:hive_flutter/hive_flutter.dart';
+
+import '../user_model.dart';
+
+class UserAdapter extends TypeAdapter<UserModel> {
+  @override
+  final typeId = 0;
+
+  @override
+  UserModel read(BinaryReader reader) {
+    final data = reader.readList();
+
+    return UserModel(
+      userId: data[0],
+      email: data[1],
+      username: data[2],
+      password: data[3],
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, UserModel obj) {
+    writer.writeList([
+      obj.userId,
+      obj.email,
+      obj.username,
+      obj.password,
+    ]);
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/data/models/login_model.dart">
+import '../../domain/entities/user_entity.dart';
+
+class LoginModel extends UserEntity {
+  const LoginModel({
+    required String email,
+    required String password,
+  }) : super(email: email, password: password);
+
+  LoginModel copyWith({String? email, String? password}) {
+    return LoginModel(
+      email: email ?? (this.email ?? ""),
+      password: password ?? (this.password ?? ""),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/data/models/register_model.dart">
+import '../../domain/entities/user_entity.dart';
+
+class RegisterModel extends UserEntity {
+  const RegisterModel({
+    required String username,
+    required String email,
+    required String password,
+  }) : super(
+          username: username,
+          email: email,
+          password: password,
+        );
+
+  RegisterModel copyWith({
+    String? username,
+    String? email,
+    String? password,
+  }) {
+    return RegisterModel(
+      username: username ?? (this.username ?? ""),
+      email: email ?? (this.email ?? ""),
+      password: password ?? (this.password ?? ""),
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      "username": username,
+      "email": email,
+      "password": password,
+    };
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/data/models/user_model.dart">
+import '../../domain/entities/user_entity.dart';
+
+class UserModel extends UserEntity {
+  const UserModel({
+    required String userId,
+    required String email,
+    required String username,
+    required String password,
+  }) : super(
+          userId: userId,
+          email: email,
+          username: username,
+          password: password,
+        );
+
+  factory UserModel.fromJson(Map<String, dynamic> json, String userId) {
+    return UserModel(
+      userId: userId,
+      email: json["email"],
+      username: json["username"],
+      password: json["password"],
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/data/repositories/auth_repository_impl.dart">
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/cache/hive_local_storage.dart';
+import '../../../../core/cache/secure_local_storage.dart';
+import '../../../../core/errors/exceptions.dart';
+import '../../../../core/errors/failures.dart';
+import '../../domain/entities/user_entity.dart';
+import '../../domain/repositories/auth_repository.dart';
+import '../../domain/usecases/usecase_params.dart';
+import '../datasources/auth_local_datasource.dart';
+import '../datasources/auth_remote_datasource.dart';
+import '../models/login_model.dart';
+import '../models/register_model.dart';
+
+class AuthRepositoryImpl implements AuthRepository {
+  final AuthRemoteDataSource _authRemoteDataSource;
+  final AuthLocalDataSource _authLocalDataSource;
+  final SecureLocalStorage _secureLocalStorage;
+  final HiveLocalStorage _localStorage;
+  const AuthRepositoryImpl(
+    this._authRemoteDataSource,
+    this._authLocalDataSource,
+    this._secureLocalStorage,
+    this._localStorage,
+  );
+
+  @override
+  Future<Either<Failure, UserEntity>> login(LoginParams params) async {
+    try {
+      final model = LoginModel(
+        email: params.email,
+        password: params.password,
+      );
+
+      final result = await _authRemoteDataSource.login(model);
+      if (result.password != params.password) {
+        return Left(CredentialFailure());
+      }
+
+      await _secureLocalStorage.save(key: "user_id", value: result.userId);
+      await _localStorage.save(key: "user", value: result, boxName: "cache");
+
+      return Right(result);
+    } on AuthException {
+      return Left(CredentialFailure());
+    } on ServerException {
+      return Left(ServerFailure());
+    }
+  }
+
+  @override
+  Future<Either<Failure, void>> logout() async {
+    try {
+      final result = await _authRemoteDataSource.logout();
+
+      await _secureLocalStorage.delete(key: "user_id");
+      await _localStorage.delete(key: "user", boxName: "cache");
+
+      return Right(result);
+    } on ServerException {
+      return Left(ServerFailure());
+    }
+  }
+
+  @override
+  Future<Either<Failure, void>> register(RegisterParams params) async {
+    try {
+      final model = RegisterModel(
+        username: params.username,
+        email: params.email,
+        password: params.password,
+      );
+
+      final result = await _authRemoteDataSource.register(model);
+      return Right(result);
+    } on DuplicateEmailException {
+      return Left(DuplicateEmailFailure());
+    } on ServerException {
+      return Left(ServerFailure());
+    }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> checkSignInStatus() async {
+    try {
+      final result = await _authLocalDataSource.checkSignInStatus();
+
+      return Right(result);
+    } on CacheException {
+      return Left(CacheFailure());
+    }
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/di/auth_depedency.dart">
+import '../../../core/cache/hive_local_storage.dart';
+import '../../../core/cache/secure_local_storage.dart';
+import '../../../configs/injector/injector_conf.dart';
+import '../data/datasources/auth_local_datasource.dart';
+import '../data/datasources/auth_remote_datasource.dart';
+import '../data/repositories/auth_repository_impl.dart';
+import '../domain/usecases/check_signin_status_usecase.dart';
+import '../domain/usecases/login_usecase.dart';
+import '../domain/usecases/logout_usecase.dart';
+import '../domain/usecases/register_usecase.dart';
+import '../presentation/bloc/auth/auth_bloc.dart';
+import '../presentation/bloc/auth_login_form/auth_login_form_bloc.dart';
+import '../presentation/bloc/auth_register_form/auth_register_form_bloc.dart';
+
+class AuthDepedency {
+  AuthDepedency._();
+
+  static void init() {
+    getIt.registerFactory(
+      () => AuthBloc(
+        getIt<AuthLoginUseCase>(),
+        getIt<AuthLogoutUseCase>(),
+        getIt<AuthRegisterUseCase>(),
+        getIt<AuthCheckSignInStatusUseCase>(),
+      ),
+    );
+
+    getIt.registerFactory(
+      () => AuthLoginFormBloc(),
+    );
+
+    getIt.registerFactory(
+      () => AuthRegisterFormBloc(),
+    );
+
+    getIt.registerLazySingleton(
+      () => AuthLoginUseCase(
+        getIt<AuthRepositoryImpl>(),
+      ),
+    );
+
+    getIt.registerLazySingleton(
+      () => AuthLogoutUseCase(
+        getIt<AuthRepositoryImpl>(),
+      ),
+    );
+
+    getIt.registerLazySingleton(
+      () => AuthRegisterUseCase(
+        getIt<AuthRepositoryImpl>(),
+      ),
+    );
+
+    getIt.registerLazySingleton(
+      () => AuthCheckSignInStatusUseCase(
+        getIt<AuthRepositoryImpl>(),
+      ),
+    );
+
+    getIt.registerLazySingleton(
+      () => AuthRepositoryImpl(
+        getIt<AuthRemoteDataSourceImpl>(),
+        getIt<AuthLocalDataSourceImpl>(),
+        getIt<SecureLocalStorage>(),
+        getIt<HiveLocalStorage>(),
+      ),
+    );
+
+    getIt.registerLazySingleton(
+      () => AuthRemoteDataSourceImpl(),
+    );
+
+    getIt.registerLazySingleton(
+      () => AuthLocalDataSourceImpl(
+        getIt<SecureLocalStorage>(),
+        getIt<HiveLocalStorage>(),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/domain/entities/user_entity.dart">
+import 'package:equatable/equatable.dart';
+
+class UserEntity extends Equatable {
+  final String? userId;
+  final String? username;
+  final String? email;
+  final String? password;
+  const UserEntity({
+    this.userId,
+    this.username,
+    this.email,
+    this.password,
+  });
+
+  @override
+  List<Object?> get props => [
+        userId,
+        username,
+        email,
+        password,
+      ];
+}
+</file>
+
+<file path="lib/src/features/auth/domain/repositories/auth_repository.dart">
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../entities/user_entity.dart';
+import '../usecases/usecase_params.dart';
+
+abstract class AuthRepository {
+  Future<Either<Failure, UserEntity>> login(LoginParams params);
+  Future<Either<Failure, void>> logout();
+  Future<Either<Failure, void>> register(RegisterParams params);
+  Future<Either<Failure, UserEntity>> checkSignInStatus();
+}
+</file>
+
+<file path="lib/src/features/auth/domain/usecases/check_signin_status_usecase.dart">
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../entities/user_entity.dart';
+import '../repositories/auth_repository.dart';
+
+class AuthCheckSignInStatusUseCase implements UseCase<UserEntity, NoParams> {
+  final AuthRepository _authRepository;
+  const AuthCheckSignInStatusUseCase(this._authRepository);
+
+  @override
+  Future<Either<Failure, UserEntity>> call(NoParams params) async {
+    return await _authRepository.checkSignInStatus();
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/domain/usecases/login_usecase.dart">
+import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc_ca/src/core/extensions/string_validator_extension.dart';
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../entities/user_entity.dart';
+import '../repositories/auth_repository.dart';
+
+class AuthLoginUseCase implements UseCase<UserEntity, Params> {
+  final AuthRepository _authRepository;
+  const AuthLoginUseCase(this._authRepository);
+
+  @override
+  Future<Either<Failure, UserEntity>> call(Params params) async {
+    if (!params.email.isEmailValid) {
+      return Left(InvalidEmailFailure());
+    }
+
+    if (!params.password.isPasswordValid) {
+      return Left(InvalidPasswordFailure());
+    }
+
+    final result = await _authRepository.login(params);
+
+    return result;
+  }
+}
+
+class Params extends Equatable {
+  final String email;
+  final String password;
+  const Params({
+    required this.email,
+    required this.password,
+  });
+
+  @override
+  List<Object?> get props => [
+        email,
+        password,
+      ];
+}
+</file>
+
+<file path="lib/src/features/auth/domain/usecases/logout_usecase.dart">
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../repositories/auth_repository.dart';
+
+class AuthLogoutUseCase implements UseCase<void, NoParams> {
+  final AuthRepository _authRepository;
+  const AuthLogoutUseCase(this._authRepository);
+
+  @override
+  Future<Either<Failure, void>> call(NoParams params) async {
+    return await _authRepository.logout();
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/domain/usecases/register_usecase.dart">
+import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc_ca/src/core/extensions/string_validator_extension.dart';
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../repositories/auth_repository.dart';
+
+class AuthRegisterUseCase implements UseCase<void, Params> {
+  final AuthRepository _authRepository;
+  const AuthRegisterUseCase(this._authRepository);
+
+  @override
+  Future<Either<Failure, void>> call(Params params) async {
+    if (!params.email.isEmailValid) {
+      return Left(InvalidEmailFailure());
+    }
+
+    if (!params.password.isPasswordValid ||
+        !params.confirmPassword.isPasswordValid) {
+      return Left(InvalidPasswordFailure());
+    }
+
+    if (params.password != params.confirmPassword) {
+      return Left(PasswordNotMatchFailure());
+    }
+
+    return await _authRepository.register(params);
+  }
+}
+
+class Params extends Equatable {
+  final String username;
+  final String email;
+  final String password;
+  final String confirmPassword;
+  const Params({
+    required this.username,
+    required this.email,
+    required this.password,
+    required this.confirmPassword,
+  });
+
+  @override
+  List<Object?> get props => [
+        username,
+        email,
+        password,
+        confirmPassword,
+      ];
+}
+</file>
+
+<file path="lib/src/features/auth/domain/usecases/usecase_params.dart">
+import 'register_usecase.dart' as register_params;
+import 'login_usecase.dart' as login_params;
+
+typedef RegisterParams = register_params.Params;
+typedef LoginParams = login_params.Params;
+</file>
+
+<file path="lib/src/features/auth/presentation/bloc/auth/auth_bloc.dart">
+import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../../core/usecases/usecase.dart';
+import '../../../../../core/utils/failure_converter.dart';
+import '../../../../../core/utils/logger.dart';
+import '../../../domain/entities/user_entity.dart';
+import '../../../domain/usecases/check_signin_status_usecase.dart';
+import '../../../domain/usecases/login_usecase.dart';
+import '../../../domain/usecases/logout_usecase.dart';
+import '../../../domain/usecases/register_usecase.dart';
+import '../../../domain/usecases/usecase_params.dart';
+
+part 'auth_event.dart';
+part 'auth_state.dart';
+
+class AuthBloc extends Bloc<AuthEvent, AuthState> {
+  final AuthLoginUseCase _loginUseCase;
+  final AuthRegisterUseCase _registerUseCase;
+  final AuthLogoutUseCase _logoutUseCase;
+  final AuthCheckSignInStatusUseCase _checkSignInStatusUseCase;
+  AuthBloc(
+    this._loginUseCase,
+    this._logoutUseCase,
+    this._registerUseCase,
+    this._checkSignInStatusUseCase,
+  ) : super(AuthInitialState()) {
+    on<AuthLoginEvent>(_login);
+    on<AuthLogoutEvent>(_logout);
+    on<AuthRegisterEvent>(_register);
+    on<AuthCheckSignInStatusEvent>(_checkSignInStatus);
+  }
+
+  Future _login(AuthLoginEvent event, Emitter emit) async {
+    emit(AuthLoginLoadingState());
+
+    final result = await _loginUseCase.call(
+      LoginParams(
+        email: event.email,
+        password: event.password,
+      ),
+    );
+
+    result.fold(
+      (l) => emit(AuthLoginFailureState(mapFailureToMessage(l))),
+      (r) => emit(AuthLoginSuccessState(r)),
+    );
+  }
+
+  Future _logout(AuthLogoutEvent event, Emitter emit) async {
+    emit(AuthLogoutLoadingState());
+
+    final result = await _logoutUseCase.call(NoParams());
+
+    result.fold(
+      (l) => emit(AuthLogoutFailureState(mapFailureToMessage(l))),
+      (r) => emit(const AuthLogoutSuccessState("Logout Success")),
+    );
+  }
+
+  Future _register(AuthRegisterEvent event, Emitter emit) async {
+    emit(AuthRegisterLoadingState());
+
+    final result = await _registerUseCase.call(
+      RegisterParams(
+        username: event.username,
+        email: event.email,
+        password: event.password,
+        confirmPassword: event.confirmPassword,
+      ),
+    );
+
+    result.fold(
+      (l) => emit(AuthRegisterFailureState(mapFailureToMessage(l))),
+      (r) => emit(const AuthRegisterSuccessState("Register Success")),
+    );
+  }
+
+  Future _checkSignInStatus(
+      AuthCheckSignInStatusEvent event, Emitter emit) async {
+    emit(AuthCheckSignInStatusLoadingState());
+
+    final result = await _checkSignInStatusUseCase.call(NoParams());
+
+    result.fold(
+      (l) => emit(AuthCheckSignInStatusFailureState(mapFailureToMessage(l))),
+      (r) => emit(AuthCheckSignInStatusSuccessState(r)),
+    );
+  }
+
+  @override
+  Future<void> close() {
+    logger.i("===== CLOSE AuthBloc =====");
+    return super.close();
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/bloc/auth/auth_event.dart">
+part of 'auth_bloc.dart';
+
+sealed class AuthEvent extends Equatable {
+  const AuthEvent();
+
+  @override
+  List<Object?> get props => [];
+}
+
+class AuthLoginEvent extends AuthEvent {
+  final String email;
+  final String password;
+
+  const AuthLoginEvent(this.email, this.password);
+
+  @override
+  List<Object?> get props => [email, password];
+}
+
+class AuthRegisterEvent extends AuthEvent {
+  final String username;
+  final String email;
+  final String password;
+  final String confirmPassword;
+
+  const AuthRegisterEvent(
+    this.username,
+    this.email,
+    this.password,
+    this.confirmPassword,
+  );
+
+  @override
+  List<Object?> get props => [
+        username,
+        email,
+        password,
+        confirmPassword,
+      ];
+}
+
+class AuthLogoutEvent extends AuthEvent {}
+
+class AuthCheckSignInStatusEvent extends AuthEvent {}
+</file>
+
+<file path="lib/src/features/auth/presentation/bloc/auth/auth_state.dart">
+part of 'auth_bloc.dart';
+
+sealed class AuthState extends Equatable {
+  const AuthState();
+  @override
+  List<Object?> get props => [];
+}
+
+class AuthInitialState extends AuthState {}
+
+class AuthRegisterLoadingState extends AuthState {}
+
+class AuthRegisterSuccessState extends AuthState {
+  final String message;
+
+  const AuthRegisterSuccessState(this.message);
+
+  @override
+  List<Object?> get props => [message];
+}
+
+class AuthRegisterFailureState extends AuthState {
+  final String message;
+
+  const AuthRegisterFailureState(this.message);
+
+  @override
+  List<Object?> get props => [message];
+}
+
+class AuthLoginLoadingState extends AuthState {}
+
+class AuthLoginSuccessState extends AuthState {
+  final UserEntity data;
+
+  const AuthLoginSuccessState(this.data);
+
+  @override
+  List<Object?> get props => [data];
+}
+
+class AuthLoginFailureState extends AuthState {
+  final String message;
+
+  const AuthLoginFailureState(this.message);
+
+  @override
+  List<Object?> get props => [message];
+}
+
+class AuthLogoutLoadingState extends AuthState {}
+
+class AuthLogoutSuccessState extends AuthState {
+  final String message;
+
+  const AuthLogoutSuccessState(this.message);
+
+  @override
+  List<Object?> get props => [message];
+}
+
+class AuthLogoutFailureState extends AuthState {
+  final String message;
+
+  const AuthLogoutFailureState(this.message);
+
+  @override
+  List<Object?> get props => [message];
+}
+
+class AuthCheckSignInStatusLoadingState extends AuthState {}
+
+class AuthCheckSignInStatusSuccessState extends AuthState {
+  final UserEntity data;
+
+  const AuthCheckSignInStatusSuccessState(this.data);
+
+  @override
+  List<Object?> get props => [data];
+}
+
+class AuthCheckSignInStatusFailureState extends AuthState {
+  final String message;
+
+  const AuthCheckSignInStatusFailureState(this.message);
+
+  @override
+  List<Object?> get props => [message];
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/bloc/auth_login_form/auth_login_form_bloc.dart">
+import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../../core/utils/logger.dart';
+
+part 'auth_login_form_event.dart';
+part 'auth_login_form_state.dart';
+
+class AuthLoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
+  AuthLoginFormBloc() : super(const LoginFormInitialState()) {
+    on<LoginFormEmailChangedEvent>(_emailChanged);
+    on<LoginFormPasswordChangedEvent>(_passwordChanged);
+  }
+
+  Future _emailChanged(LoginFormEmailChangedEvent event, Emitter emit) async {
+    emit(
+      LoginFormDataState(
+        inputEmail: event.email,
+        inputPassword: state.password,
+        inputIsValid: inputValidator(
+          event.email,
+          state.password,
+        ),
+      ),
+    );
+  }
+
+  Future _passwordChanged(
+      LoginFormPasswordChangedEvent event, Emitter emit) async {
+    emit(
+      LoginFormDataState(
+        inputEmail: state.email,
+        inputPassword: event.password,
+        inputIsValid: inputValidator(
+          state.email,
+          event.password,
+        ),
+      ),
+    );
+  }
+
+  bool inputValidator(String email, String password) {
+    if (email.isNotEmpty && password.isNotEmpty) {
+      return true;
+    }
+
+    return false;
+  }
+
+  @override
+  Future<void> close() {
+    logger.i("===== CLOSE AuthLoginFormBloc =====");
+    return super.close();
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/bloc/auth_login_form/auth_login_form_event.dart">
+part of 'auth_login_form_bloc.dart';
+
+sealed class LoginFormEvent extends Equatable {
+  const LoginFormEvent();
+
+  @override
+  List<Object?> get props => [];
+}
+
+class LoginFormEmailChangedEvent extends LoginFormEvent {
+  final String email;
+
+  const LoginFormEmailChangedEvent(this.email);
+
+  @override
+  List<Object?> get props => [email];
+}
+
+class LoginFormUsernameChangedEvent extends LoginFormEvent {
+  final String username;
+
+  const LoginFormUsernameChangedEvent(this.username);
+
+  @override
+  List<Object?> get props => [username];
+}
+
+class LoginFormPasswordChangedEvent extends LoginFormEvent {
+  final String password;
+
+  const LoginFormPasswordChangedEvent(this.password);
+
+  @override
+  List<Object?> get props => [password];
+}
+
+class LoginFormConfirmPasswordChangedEvent extends LoginFormEvent {
+  final String confirmPassword;
+
+  const LoginFormConfirmPasswordChangedEvent(this.confirmPassword);
+
+  @override
+  List<Object?> get props => [confirmPassword];
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/bloc/auth_login_form/auth_login_form_state.dart">
+part of 'auth_login_form_bloc.dart';
+
+sealed class LoginFormState extends Equatable {
+  final String email;
+  final String password;
+  final bool isValid;
+  const LoginFormState({
+    required this.email,
+    required this.password,
+    required this.isValid,
+  });
+  @override
+  List<Object?> get props => [
+        email,
+        password,
+        isValid,
+      ];
+}
+
+class LoginFormInitialState extends LoginFormState {
+  const LoginFormInitialState()
+      : super(
+          email: "",
+          password: "",
+          isValid: false,
+        );
+}
+
+class LoginFormDataState extends LoginFormState {
+  final String inputEmail;
+  final String inputPassword;
+  final bool inputIsValid;
+  const LoginFormDataState({
+    required this.inputEmail,
+    required this.inputPassword,
+    required this.inputIsValid,
+  }) : super(
+          email: inputEmail,
+          password: inputPassword,
+          isValid: inputIsValid,
+        );
+  @override
+  List<Object?> get props => [
+        inputEmail,
+        inputPassword,
+        inputIsValid,
+      ];
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/bloc/auth_register_form/auth_register_form_bloc.dart">
+import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_ca/src/core/extensions/string_validator_extension.dart';
+
+import '../../../../../core/utils/logger.dart';
+
+part 'auth_register_form_event.dart';
+part 'auth_register_form_state.dart';
+
+class AuthRegisterFormBloc extends Bloc<RegisterFormEvent, RegisterFormState> {
+  AuthRegisterFormBloc() : super(const RegisterFormInitialState()) {
+    on<RegisterFormEmailChangedEvent>(_emailChanged);
+    on<RegisterFormUsernameChangedEvent>(_usernameChanged);
+    on<RegisterFormPasswordChangedEvent>(_passwordChanged);
+    on<RegisterFormConfirmPasswordChangedEvent>(_confirmPasswordChanged);
+  }
+
+  Future _emailChanged(
+      RegisterFormEmailChangedEvent event, Emitter emit) async {
+    emit(
+      RegisterFormDataState(
+        inputEmail: event.email,
+        inputUsername: state.username,
+        inputPassword: state.password,
+        inputConfirmPassword: state.confirmPassword,
+        inputIsValid: inputValidator(
+          state.username,
+          event.email,
+          state.password,
+          state.confirmPassword,
+        ),
+      ),
+    );
+  }
+
+  Future _usernameChanged(
+      RegisterFormUsernameChangedEvent event, Emitter emit) async {
+    emit(
+      RegisterFormDataState(
+        inputEmail: state.email,
+        inputUsername: event.username,
+        inputPassword: state.password,
+        inputConfirmPassword: state.confirmPassword,
+        inputIsValid: inputValidator(
+          event.username,
+          state.email,
+          state.password,
+          state.confirmPassword,
+        ),
+      ),
+    );
+  }
+
+  Future _passwordChanged(
+      RegisterFormPasswordChangedEvent event, Emitter emit) async {
+    emit(
+      RegisterFormDataState(
+        inputEmail: state.email,
+        inputUsername: state.username,
+        inputPassword: event.password,
+        inputConfirmPassword: state.confirmPassword,
+        inputIsValid: inputValidator(
+          state.username,
+          state.email,
+          event.password,
+          state.confirmPassword,
+        ),
+      ),
+    );
+  }
+
+  Future _confirmPasswordChanged(
+      RegisterFormConfirmPasswordChangedEvent event, Emitter emit) async {
+    emit(RegisterFormDataState(
+      inputUsername: state.username,
+      inputEmail: state.email,
+      inputPassword: state.password,
+      inputConfirmPassword: event.confirmPassword,
+      inputIsValid: inputValidator(
+        state.username,
+        state.email,
+        state.password,
+        event.confirmPassword,
+      ),
+    ));
+  }
+
+  bool inputValidator(
+    String username,
+    String email,
+    String password,
+    String confirmPassword,
+  ) {
+    if (username.isEmpty) {
+      return false;
+    }
+
+    if (!email.isEmailValid) {
+      return false;
+    }
+
+    if (password.length < 6 && confirmPassword.length < 6) {
+      return false;
+    }
+
+    if (!password.isPasswordValid || !confirmPassword.isPasswordValid) {
+      return false;
+    }
+
+    if (password != confirmPassword) {
+      return false;
+    }
+
+    return true;
+  }
+
+  @override
+  Future<void> close() {
+    logger.i("===== CLOSE AuthRegisterFormBloc =====");
+    return super.close();
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/bloc/auth_register_form/auth_register_form_event.dart">
+part of 'auth_register_form_bloc.dart';
+
+sealed class RegisterFormEvent extends Equatable {
+  const RegisterFormEvent();
+
+  @override
+  List<Object?> get props => [];
+}
+
+class RegisterFormEmailChangedEvent extends RegisterFormEvent {
+  final String email;
+
+  const RegisterFormEmailChangedEvent(this.email);
+
+  @override
+  List<Object?> get props => [email];
+}
+
+class RegisterFormUsernameChangedEvent extends RegisterFormEvent {
+  final String username;
+
+  const RegisterFormUsernameChangedEvent(this.username);
+
+  @override
+  List<Object?> get props => [username];
+}
+
+class RegisterFormPasswordChangedEvent extends RegisterFormEvent {
+  final String password;
+
+  const RegisterFormPasswordChangedEvent(this.password);
+
+  @override
+  List<Object?> get props => [password];
+}
+
+class RegisterFormConfirmPasswordChangedEvent extends RegisterFormEvent {
+  final String confirmPassword;
+
+  const RegisterFormConfirmPasswordChangedEvent(this.confirmPassword);
+
+  @override
+  List<Object?> get props => [confirmPassword];
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/bloc/auth_register_form/auth_register_form_state.dart">
+part of 'auth_register_form_bloc.dart';
+
+sealed class RegisterFormState extends Equatable {
+  final String email;
+  final String username;
+  final String password;
+  final String confirmPassword;
+  final bool isValid;
+  const RegisterFormState({
+    required this.email,
+    required this.username,
+    required this.password,
+    required this.confirmPassword,
+    required this.isValid,
+  });
+  @override
+  List<Object?> get props => [
+        email,
+        username,
+        password,
+        confirmPassword,
+        isValid,
+      ];
+}
+
+class RegisterFormInitialState extends RegisterFormState {
+  const RegisterFormInitialState()
+      : super(
+          email: "",
+          username: "",
+          password: "",
+          confirmPassword: "",
+          isValid: false,
+        );
+}
+
+class RegisterFormDataState extends RegisterFormState {
+  final String inputEmail;
+  final String inputUsername;
+  final String inputPassword;
+  final String inputConfirmPassword;
+  final bool inputIsValid;
+  const RegisterFormDataState({
+    required this.inputEmail,
+    required this.inputUsername,
+    required this.inputPassword,
+    required this.inputConfirmPassword,
+    required this.inputIsValid,
+  }) : super(
+          email: inputEmail,
+          username: inputUsername,
+          password: inputPassword,
+          confirmPassword: inputConfirmPassword,
+          isValid: inputIsValid,
+        );
+  @override
+  List<Object?> get props => [
+        inputEmail,
+        inputUsername,
+        inputPassword,
+        inputConfirmPassword,
+        inputIsValid,
+      ];
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/pages/auth_page.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc_ca/src/core/extensions/integer_sizedbox_extension.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../core/themes/app_font.dart';
+import '../../../../routes/app_route_path.dart';
+import '../../../../widgets/button_widget.dart';
+
+class AuthPage extends StatelessWidget {
+  const AuthPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "judul".tr(),
+                style: AppFont.bold.s16,
+                textAlign: TextAlign.center,
+              ),
+              60.hS,
+              AppButtonWidget(
+                label: "masuk".tr(),
+                callback: () {
+                  context.pushNamed(AppRoute.login.name);
+                },
+                paddingHorizontal: 40.w,
+                paddingVertical: 10.h,
+              ),
+              20.hS,
+              AppButtonWidget(
+                label: "daftar".tr(),
+                callback: () {
+                  context.pushNamed(AppRoute.register.name);
+                },
+                paddingHorizontal: 40.w,
+                paddingVertical: 10.h,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/pages/login_page.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_ca/src/core/extensions/integer_sizedbox_extension.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../configs/injector/injector_conf.dart';
+import '../../../../routes/app_route_path.dart';
+import '../../../../widgets/button_widget.dart';
+import '../../../../widgets/loading_widget.dart';
+import '../../../../widgets/snackbar_widget.dart';
+import '../bloc/auth/auth_bloc.dart';
+import '../bloc/auth_login_form/auth_login_form_bloc.dart';
+import '../widgets/auth_login_input.dart';
+
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
+  void _login(BuildContext context) {
+    primaryFocus?.unfocus();
+    final authForm = context.read<AuthLoginFormBloc>().state;
+    context.read<AuthBloc>().add(
+          AuthLoginEvent(
+            authForm.email.trim(),
+            authForm.password.trim(),
+          ),
+        );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (_) => getIt<AuthLoginFormBloc>(),
+      child: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const AuthLoginInput(),
+                  20.hS,
+                  BlocConsumer<AuthBloc, AuthState>(
+                    listener: (_, state) {
+                      if (state is AuthLoginFailureState) {
+                        appSnackBar(context, Colors.red, state.message);
+                      } else if (state is AuthLoginSuccessState) {
+                        final user = state.data;
+                        context.goNamed(
+                          AppRoute.home.name,
+                          pathParameters: {
+                            "user_id": user.userId ?? "",
+                            "email": user.email ?? "",
+                            "username": user.username ?? "",
+                          },
+                        );
+                      }
+                    },
+                    builder: (context, state) {
+                      if (state is AuthLoginLoadingState) {
+                        return const AppLoadingWidget();
+                      }
+
+                      return AppButtonWidget(
+                        label: "masuk".tr(),
+                        callback:
+                            context.watch<AuthLoginFormBloc>().state.isValid
+                                ? () {
+                                    _login(context);
+                                  }
+                                : null,
+                        paddingHorizontal: 30.w,
+                        paddingVertical: 10.h,
+                      );
+                    },
+                  ),
+                  10.hS,
+                  TextButton(
+                    onPressed: () {
+                      context.pushReplacementNamed(AppRoute.register.name);
+                    },
+                    child: Text("daftar".tr()),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/pages/register_page.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_ca/src/core/extensions/integer_sizedbox_extension.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../configs/injector/injector_conf.dart';
+import '../../../../routes/app_route_path.dart';
+import '../../../../widgets/button_widget.dart';
+import '../../../../widgets/loading_widget.dart';
+import '../../../../widgets/snackbar_widget.dart';
+import '../bloc/auth/auth_bloc.dart';
+import '../bloc/auth_register_form/auth_register_form_bloc.dart';
+import '../widgets/auth_register_input.dart';
+
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({super.key});
+
+  void _register(BuildContext context) {
+    primaryFocus?.unfocus();
+    final authForm = context.read<AuthRegisterFormBloc>().state;
+    context.read<AuthBloc>().add(
+          AuthRegisterEvent(
+            authForm.username.trim(),
+            authForm.email.trim(),
+            authForm.password.trim(),
+            authForm.confirmPassword.trim(),
+          ),
+        );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (_) => getIt<AuthRegisterFormBloc>(),
+      child: Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const AuthRegisterInput(),
+                  20.hS,
+                  BlocConsumer<AuthBloc, AuthState>(
+                    listener: (_, state) {
+                      if (state is AuthRegisterSuccessState) {
+                        appSnackBar(context, Colors.green, state.message);
+                        context.goNamed(AppRoute.login.name);
+                      } else if (state is AuthRegisterFailureState) {
+                        appSnackBar(context, Colors.red, state.message);
+                      }
+                    },
+                    builder: (context, state) {
+                      if (state is AuthRegisterLoadingState) {
+                        return const AppLoadingWidget();
+                      }
+
+                      return AppButtonWidget(
+                        label: "daftar".tr(),
+                        callback:
+                            context.watch<AuthRegisterFormBloc>().state.isValid
+                                ? () {
+                                    _register(context);
+                                  }
+                                : null,
+                        paddingHorizontal: 30.w,
+                        paddingVertical: 10.h,
+                      );
+                    },
+                  ),
+                  10.hS,
+                  TextButton(
+                    onPressed: () {
+                      context.pushReplacementNamed(AppRoute.login.name);
+                    },
+                    child: Text("masuk".tr()),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/widgets/auth_login_input.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../bloc/auth_login_form/auth_login_form_bloc.dart';
+import 'auth_text_field.dart';
+
+class AuthLoginInput extends StatelessWidget {
+  const AuthLoginInput({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final formBloc = context.read<AuthLoginFormBloc>();
+    return Column(
+      children: [
+        AuthTextField<AuthLoginFormBloc>(
+          label: "input_email".tr(),
+          onChanged: (val) {
+            formBloc.add(LoginFormEmailChangedEvent(val));
+          },
+        ),
+        AuthTextField<AuthLoginFormBloc>(
+          label: "input_kata_sandi".tr(),
+          onChanged: (val) {
+            formBloc.add(LoginFormPasswordChangedEvent(val));
+          },
+          isSecure: true,
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/widgets/auth_register_input.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../bloc/auth_register_form/auth_register_form_bloc.dart';
+import 'auth_text_field.dart';
+
+class AuthRegisterInput extends StatelessWidget {
+  const AuthRegisterInput({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final authBloc = context.read<AuthRegisterFormBloc>();
+    return Column(
+      children: [
+        AuthTextField<AuthRegisterFormBloc>(
+          label: "input_nama_pengguna".tr(),
+          onChanged: (val) {
+            authBloc.add(RegisterFormUsernameChangedEvent(val));
+          },
+        ),
+        AuthTextField<AuthRegisterFormBloc>(
+          label: "input_email".tr(),
+          onChanged: (val) {
+            authBloc.add(RegisterFormEmailChangedEvent(val));
+          },
+        ),
+        AuthTextField<AuthRegisterFormBloc>(
+          label: "input_kata_sandi".tr(),
+          onChanged: (val) {
+            authBloc.add(RegisterFormPasswordChangedEvent(val));
+          },
+          isSecure: true,
+        ),
+        AuthTextField<AuthRegisterFormBloc>(
+          label: "input_konfirmasi_kata_sandi".tr(),
+          onChanged: (val) {
+            authBloc.add(RegisterFormConfirmPasswordChangedEvent(val));
+          },
+          isSecure: true,
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/auth/presentation/widgets/auth_text_field.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_ca/src/core/extensions/string_validator_extension.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/themes/app_color.dart';
+import '../bloc/auth_register_form/auth_register_form_bloc.dart';
+
+class AuthTextField<T> extends StatefulWidget {
+  final String label;
+  final bool? isSecure;
+  final List<TextInputFormatter>? inputFormat;
+  final void Function(String)? onChanged;
+  final String? initialValue;
+  const AuthTextField({
+    super.key,
+    required this.label,
+    required this.onChanged,
+    this.isSecure,
+    this.inputFormat,
+    this.initialValue,
+  });
+
+  @override
+  State<AuthTextField<T>> createState() => _AuthTextFieldState<T>();
+}
+
+class _AuthTextFieldState<T> extends State<AuthTextField<T>> {
+  bool _isVisible = true;
+
+  void _toggleVisibility() {
+    setState(() {
+      _isVisible = !_isVisible;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final formBloc = context.read<T>();
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: 15.w,
+        vertical: 10.h,
+      ),
+      child: TextFormField(
+        initialValue: widget.initialValue,
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        obscureText: widget.isSecure ?? false ? _isVisible : false,
+        cursorColor: AppColor.purple,
+        onChanged: widget.onChanged,
+        inputFormatters: widget.inputFormat,
+        validator: (val) {
+          if (formBloc is AuthRegisterFormBloc) {
+            if (widget.label == "input_nama_pengguna".tr() && val == "") {
+              return "Username tidak boleh kosong";
+            } else if (widget.label == "input_email".tr() &&
+                !formBloc.state.email.isEmailValid) {
+              return "Email tidak valid";
+            } else if ((widget.label == "input_kata_sandi".tr() ||
+                    widget.label == "input_konfirmasi_kata_sandi".tr()) &&
+                val!.length < 6) {
+              return "Password minimal 6 karakter";
+            } else if (widget.label == "input_kata_sandi".tr() &&
+                !formBloc.state.password.isPasswordValid) {
+              return "Password harus kombinasi huruf dan angka";
+            } else if (widget.label == "input_konfirmasi_kata_sandi".tr() &&
+                !formBloc.state.confirmPassword.isPasswordValid) {
+              return "Password harus kombinasi huruf dan angka";
+            } else if (widget.label == "input_konfirmasi_kata_sandi".tr() &&
+                formBloc.state.password != formBloc.state.confirmPassword) {
+              return "Password tidak sama";
+            }
+          }
+
+          return null;
+        },
+        decoration: InputDecoration(
+          label: Text(widget.label),
+          suffixIcon: widget.isSecure ?? false
+              ? IconButton(
+                  onPressed: () {
+                    _toggleVisibility();
+                  },
+                  icon: Icon(
+                    _isVisible
+                        ? Icons.visibility_rounded
+                        : Icons.visibility_off_rounded,
+                  ),
+                  splashRadius: 20.r,
+                )
+              : null,
+          border: const OutlineInputBorder(),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColor.purple,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/product/data/datasources/product_local_datasource.dart">
+import 'package:flutter_bloc_ca/src/core/utils/logger.dart';
+
+import '../../../../core/cache/local_storage.dart';
+import '../../../../core/errors/exceptions.dart';
+import '../models/get_product_model.dart';
+
+sealed class ProductLocalDataSource {
+  Future<List<ProductModel>> getAllProduct();
+}
+
+class ProductLocalDataSourceImpl implements ProductLocalDataSource {
+  final LocalStorage _localStorage;
+  const ProductLocalDataSourceImpl(this._localStorage);
+
+  @override
+  Future<List<ProductModel>> getAllProduct() => _getProductFromCache();
+
+  Future<List<ProductModel>> _getProductFromCache() async {
+    try {
+      final response = await _localStorage.load(
+        key: "products",
+        boxName: "cache",
+      );
+
+      return ProductModel.fromMapList(response);
+    } catch (e) {
+      logger.e(e);
+      throw CacheException();
+    }
+  }
+}
+</file>
+
+<file path="lib/src/features/product/data/datasources/product_remote_datasource.dart">
+import 'dart:developer';
+
+import 'package:flutter_bloc_ca/src/features/product/data/models/models.dart';
+
+import '../../../../core/api/api_helper.dart';
+import '../../../../core/api/api_url.dart';
+import '../../../../core/errors/exceptions.dart';
+import '../../../../core/utils/logger.dart';
+
+sealed class ProductRemoteDataSource {
+  Future<List<ProductModel>> fetchProduct();
+  Future<void> createProduct(CreateProductModel model);
+  Future<void> updateProduct(UpdateProductModel model);
+  Future<void> deleteProduct(DeleteProductModel model);
+}
+
+class ProductRemoteDataSourceImpl implements ProductRemoteDataSource {
+  final ApiHelper _helper;
+
+  const ProductRemoteDataSourceImpl(this._helper);
+
+  @override
+  Future<List<ProductModel>> fetchProduct() => fetchProductFromUrl("");
+
+  Future<List<ProductModel>> fetchProductFromUrl(String url) async {
+    try {
+      // final response = await _helper.execute(method: Method.get, url: url);
+      log(_helper.toString());
+      final response = await ApiUrl.products.get();
+
+      return ProductModel.fromJsonList(response.docs
+          .map((e) => {
+                "product_id": e.id,
+                "name": e.data()["name"],
+                "price": e.data()["price"],
+              })
+          .toList());
+    } catch (e) {
+      logger.e(e);
+      throw ServerException();
+    }
+  }
+
+  @override
+  Future<void> createProduct(CreateProductModel model) async {
+    try {
+      // await _helper.execute(
+      //   method: Method.post,
+      //   url: "ApiUrl.products",
+      //   data: {},
+      // );
+      await ApiUrl.products.add(model.toMap());
+      return;
+    } catch (e) {
+      logger.e(e);
+      throw ServerException();
+    }
+  }
+
+  @override
+  Future<void> deleteProduct(DeleteProductModel model) async {
+    try {
+      await ApiUrl.products.doc(model.productId).delete();
+      return;
+    } catch (e) {
+      logger.e(e);
+      throw ServerException();
+    }
+  }
+
+  @override
+  Future<void> updateProduct(UpdateProductModel model) async {
+    try {
+      await ApiUrl.products.doc(model.productId).update(model.toMap());
+      return;
+    } catch (e) {
+      logger.e(e);
+      throw ServerException();
+    }
+  }
+}
+</file>
+
+<file path="lib/src/features/product/data/models/create_product_model.dart">
+import '../../domain/entities/product_entity.dart';
+
+class CreateProductModel extends ProductEntity {
+  const CreateProductModel({
+    required String name,
+    required int price,
+  }) : super(name: name, price: price);
+
+  Map<String, dynamic> toMap() {
+    return {
+      "name": name,
+      "price": price,
+    };
+  }
+
+  CreateProductModel copyWith({String? name, int? price}) {
+    return CreateProductModel(
+      name: name ?? (this.name ?? ""),
+      price: price ?? (this.price ?? 0),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/product/data/models/delete_product_model.dart">
+import '../../domain/entities/product_entity.dart';
+
+class DeleteProductModel extends ProductEntity {
+  const DeleteProductModel({
+    required String productId,
+  }) : super(productId: productId);
+}
+</file>
+
+<file path="lib/src/features/product/data/models/get_product_model.dart">
+import '../../domain/entities/product_entity.dart';
+
+class ProductModel extends ProductEntity {
+  const ProductModel({
+    required String productId,
+    required String name,
+    required int price,
+  }) : super(productId: productId, name: name, price: price);
+
+  factory ProductModel.fromJson(Map<String, dynamic> json) {
+    return ProductModel(
+      productId: json["product_id"],
+      name: json["name"],
+      price: json["price"],
+    );
+  }
+
+  static List<ProductModel> fromJsonList(List<dynamic> jsonList) {
+    return jsonList.map((json) => ProductModel.fromJson(json)).toList();
+  }
+
+  factory ProductModel.fromMap(Map<dynamic, dynamic> map) {
+    return ProductModel(
+      productId: map["product_id"],
+      name: map["name"],
+      price: map["price"],
+    );
+  }
+
+  static List<ProductModel> fromMapList(List<dynamic> mapList) {
+    return mapList.map((json) => ProductModel.fromMap(json)).toList();
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      "product_id": productId,
+      "name": name,
+      "price": price,
+    };
+  }
+
+  static List<Map<String, dynamic>> toMapList(List<ProductModel> productList) {
+    return productList.map((e) => e.toMap()).toList();
+  }
+}
+</file>
+
+<file path="lib/src/features/product/data/models/models.dart">
+export 'create_product_model.dart';
+export 'delete_product_model.dart';
+export 'get_product_model.dart';
+export 'update_product_model.dart';
+</file>
+
+<file path="lib/src/features/product/data/models/update_product_model.dart">
+import '../../domain/entities/product_entity.dart';
+
+class UpdateProductModel extends ProductEntity {
+  const UpdateProductModel({
+    required String productId,
+    required String name,
+    required int price,
+  }) : super(productId: productId, name: name, price: price);
+
+  Map<String, dynamic> toMap() {
+    return {
+      "name": name,
+      "price": price,
+    };
+  }
+}
+</file>
+
+<file path="lib/src/features/product/data/repositories/product_repository_impl.dart">
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/cache/local_storage.dart';
+import '../../../../core/errors/exceptions.dart';
+import '../../../../core/errors/failures.dart';
+import '../../../../core/network/network_checker.dart';
+import '../../domain/entities/product_entity.dart';
+import '../../domain/repositories/product_repository.dart';
+import '../../domain/usecases/usecase_params.dart';
+import '../datasources/product_local_datasource.dart';
+import '../datasources/product_remote_datasource.dart';
+import '../models/models.dart';
+
+class ProductRepositoryImpl implements ProductRepository {
+  final ProductRemoteDataSource _remoteDataSource;
+  final ProductLocalDataSource _localDataSource;
+  final NetworkInfo _networkInfo;
+  final LocalStorage _localStorage;
+  const ProductRepositoryImpl(
+    this._remoteDataSource,
+    this._localDataSource,
+    this._networkInfo,
+    this._localStorage,
+  );
+
+  @override
+  Future<Either<Failure, void>> create(CreateProductParams params) async {
+    try {
+      final model = CreateProductModel(
+        name: params.name,
+        price: params.price,
+      );
+
+      final result = await _remoteDataSource.createProduct(model);
+
+      return Right(result);
+    } on ServerException {
+      return Left(ServerFailure());
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<ProductEntity>>> getAll() {
+    return _networkInfo.check<List<ProductEntity>>(
+      connected: () async {
+        try {
+          final listProduct = await _remoteDataSource.fetchProduct();
+
+          await _localStorage.save(
+            key: "products",
+            value: ProductModel.toMapList(listProduct),
+            boxName: "cache",
+          );
+
+          return Right(listProduct);
+        } on ServerException {
+          return Left(ServerFailure());
+        }
+      },
+      notConnected: () async {
+        try {
+          final listProduct = await _localDataSource.getAllProduct();
+
+          return Right(listProduct);
+        } on CacheException {
+          return Left(CacheFailure());
+        }
+      },
+    );
+  }
+
+  @override
+  Future<Either<Failure, void>> delete(DeleteProductParams params) async {
+    try {
+      final model = DeleteProductModel(
+        productId: params.productId,
+      );
+
+      final result = await _remoteDataSource.deleteProduct(model);
+
+      return Right(result);
+    } on ServerException {
+      return Left(ServerFailure());
+    }
+  }
+
+  @override
+  Future<Either<Failure, void>> update(UpdateProductParams params) async {
+    try {
+      final model = UpdateProductModel(
+        productId: params.productId,
+        name: params.name,
+        price: params.price,
+      );
+
+      final result = await _remoteDataSource.updateProduct(model);
+
+      return Right(result);
+    } on ServerException {
+      return Left(ServerFailure());
+    }
+  }
+}
+</file>
+
+<file path="lib/src/features/product/di/product_depedency.dart">
+import '../../../configs/injector/injector.dart';
+import '../../../configs/injector/injector_conf.dart';
+import '../data/datasources/product_local_datasource.dart';
+import '../data/datasources/product_remote_datasource.dart';
+import '../data/repositories/product_repository_impl.dart';
+import '../domain/usecases/create_product_usecase.dart';
+import '../domain/usecases/delete_product_usecase.dart';
+import '../domain/usecases/get_product_list_usecase.dart';
+import '../domain/usecases/update_product_usecase.dart';
+import '../presentation/bloc/product/product_bloc.dart';
+import '../presentation/bloc/product_form/product_form_bloc.dart';
+
+class ProductDependency {
+  ProductDependency._();
+
+  static void init() {
+    getIt.registerFactory(
+      () => ProductBloc(
+        getIt<CreateProductUseCase>(),
+        getIt<DeleteProductUseCase>(),
+        getIt<GetProductListUseCase>(),
+        getIt<UpdateProductUseCase>(),
+      ),
+    );
+
+    getIt.registerFactory(
+      () => ProductFormBloc(),
+    );
+
+    getIt.registerLazySingleton(
+      () => GetProductListUseCase(
+        getIt<ProductRepositoryImpl>(),
+      ),
+    );
+
+    getIt.registerLazySingleton(
+      () => CreateProductUseCase(
+        getIt<ProductRepositoryImpl>(),
+      ),
+    );
+
+    getIt.registerLazySingleton(
+      () => DeleteProductUseCase(
+        getIt<ProductRepositoryImpl>(),
+      ),
+    );
+
+    getIt.registerLazySingleton(
+      () => UpdateProductUseCase(
+        getIt<ProductRepositoryImpl>(),
+      ),
+    );
+
+    getIt.registerLazySingleton(
+      () => ProductRepositoryImpl(
+        getIt<ProductRemoteDataSourceImpl>(),
+        getIt<ProductLocalDataSourceImpl>(),
+        getIt<NetworkInfo>(),
+        getIt<HiveLocalStorage>(),
+      ),
+    );
+
+    getIt.registerLazySingleton(
+      () => ProductRemoteDataSourceImpl(
+        getIt<ApiHelper>(),
+      ),
+    );
+
+    getIt.registerLazySingleton(
+      () => ProductLocalDataSourceImpl(
+        getIt<HiveLocalStorage>(),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/product/domain/entities/product_entity.dart">
+import 'package:equatable/equatable.dart';
+
+class ProductEntity extends Equatable {
+  final String? productId;
+  final String? name;
+  final int? price;
+  const ProductEntity({
+    this.productId,
+    this.name,
+    this.price,
+  });
+
+  @override
+  List<Object?> get props => [productId, name, price];
+}
+</file>
+
+<file path="lib/src/features/product/domain/repositories/product_repository.dart">
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../entities/product_entity.dart';
+import '../usecases/usecase_params.dart';
+
+abstract class ProductRepository {
+  Future<Either<Failure, void>> create(CreateProductParams params);
+  Future<Either<Failure, void>> delete(DeleteProductParams params);
+  Future<Either<Failure, List<ProductEntity>>> getAll();
+  Future<Either<Failure, void>> update(UpdateProductParams params);
+}
+</file>
+
+<file path="lib/src/features/product/domain/usecases/create_product_usecase.dart">
+import 'package:equatable/equatable.dart';
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../repositories/product_repository.dart';
+
+class CreateProductUseCase implements UseCase<void, Params> {
+  final ProductRepository _repository;
+  const CreateProductUseCase(this._repository);
+
+  @override
+  Future<Either<Failure, void>> call(Params params) async {
+    return await _repository.create(params);
+  }
+}
+
+class Params extends Equatable {
+  final String name;
+  final int price;
+
+  const Params({
+    required this.name,
+    required this.price,
+  });
+
+  @override
+  List<Object?> get props => [name, price];
+}
+</file>
+
+<file path="lib/src/features/product/domain/usecases/delete_product_usecase.dart">
+import 'package:equatable/equatable.dart';
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../repositories/product_repository.dart';
+
+class DeleteProductUseCase implements UseCase<void, Params> {
+  final ProductRepository _repository;
+  const DeleteProductUseCase(this._repository);
+
+  @override
+  Future<Either<Failure, void>> call(Params params) async {
+    if (params.productId == "") {
+      return Left(EmptyFailure());
+    }
+
+    return await _repository.delete(params);
+  }
+}
+
+class Params extends Equatable {
+  final String productId;
+
+  const Params({
+    required this.productId,
+  });
+
+  @override
+  List<Object?> get props => [productId];
+}
+</file>
+
+<file path="lib/src/features/product/domain/usecases/get_product_list_usecase.dart">
+import 'package:flutter_bloc_ca/src/features/product/domain/entities/product_entity.dart';
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../repositories/product_repository.dart';
+
+class GetProductListUseCase implements UseCase<List<ProductEntity>, NoParams> {
+  final ProductRepository _repository;
+  const GetProductListUseCase(this._repository);
+
+  @override
+  Future<Either<Failure, List<ProductEntity>>> call(NoParams params) async {
+    return await _repository.getAll();
+  }
+}
+</file>
+
+<file path="lib/src/features/product/domain/usecases/update_product_usecase.dart">
+import 'package:equatable/equatable.dart';
+import 'package:fpdart/fpdart.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../repositories/product_repository.dart';
+
+class UpdateProductUseCase implements UseCase<void, Params> {
+  final ProductRepository _repository;
+  const UpdateProductUseCase(this._repository);
+
+  @override
+  Future<Either<Failure, void>> call(Params params) async {
+    if (params.productId == "") {
+      return Left(EmptyFailure());
+    }
+
+    return await _repository.update(params);
+  }
+}
+
+class Params extends Equatable {
+  final String productId;
+  final String name;
+  final int price;
+
+  const Params({
+    required this.productId,
+    required this.name,
+    required this.price,
+  });
+
+  @override
+  List<Object?> get props => [productId, name, price];
+}
+</file>
+
+<file path="lib/src/features/product/domain/usecases/usecase_params.dart">
+import '../usecases/create_product_usecase.dart' as create_params;
+import '../usecases/update_product_usecase.dart' as update_params;
+import '../usecases/delete_product_usecase.dart' as delete_params;
+
+typedef CreateProductParams = create_params.Params;
+typedef UpdateProductParams = update_params.Params;
+typedef DeleteProductParams = delete_params.Params;
+</file>
+
+<file path="lib/src/features/product/presentation/bloc/product/product_bloc.dart">
+import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../../core/usecases/usecase.dart';
+import '../../../../../core/utils/failure_converter.dart';
+import '../../../../../core/utils/logger.dart';
+import '../../../domain/entities/product_entity.dart';
+import '../../../domain/usecases/create_product_usecase.dart';
+import '../../../domain/usecases/delete_product_usecase.dart';
+import '../../../domain/usecases/get_product_list_usecase.dart';
+import '../../../domain/usecases/update_product_usecase.dart';
+import '../../../domain/usecases/usecase_params.dart';
+
+part 'product_event.dart';
+part 'product_state.dart';
+
+class ProductBloc extends Bloc<ProductEvent, ProductState> {
+  final CreateProductUseCase _createProduct;
+  final DeleteProductUseCase _deleteProduct;
+  final GetProductListUseCase _getProductList;
+  final UpdateProductUseCase _updateProduct;
+  ProductBloc(
+    this._createProduct,
+    this._deleteProduct,
+    this._getProductList,
+    this._updateProduct,
+  ) : super(ProductInitialState()) {
+    on<CreateProductEvent>(_create);
+    on<DeleteProductEvent>(_delete);
+    on<GetProductListEvent>(_getAll);
+    on<UpdateProductEvent>(_update);
+  }
+
+  Future _create(CreateProductEvent event, Emitter emit) async {
+    emit(CreateProductLoadingState());
+
+    final result = await _createProduct.call(
+      CreateProductParams(
+        name: event.name,
+        price: event.price,
+      ),
+    );
+
+    result.fold(
+      (l) => emit(CreateProductFailureState(mapFailureToMessage(l))),
+      (r) => emit(CreateProductSuccessState()),
+    );
+  }
+
+  Future _delete(DeleteProductEvent event, Emitter emit) async {
+    emit(DeleteProductLoadingState());
+
+    final result = await _deleteProduct.call(
+      DeleteProductParams(
+        productId: event.productId,
+      ),
+    );
+
+    result.fold(
+      (l) => emit(DeleteProductFailureState(mapFailureToMessage(l))),
+      (r) => emit(DeleteProductSuccessState()),
+    );
+  }
+
+  Future _getAll(GetProductListEvent event, Emitter emit) async {
+    emit(GetProductListLoadingState());
+
+    final result = await _getProductList.call(NoParams());
+
+    result.fold(
+      (l) => emit(GetProductListFailureState(mapFailureToMessage(l))),
+      (r) => emit(GetProductListSuccessState(r)),
+    );
+  }
+
+  Future _update(UpdateProductEvent event, Emitter emit) async {
+    emit(UpdateProductLoadingState());
+
+    final result = await _updateProduct.call(
+      UpdateProductParams(
+        productId: event.productId,
+        name: event.name,
+        price: event.price,
+      ),
+    );
+
+    result.fold(
+      (l) => emit(UpdateProductFailureState(mapFailureToMessage(l))),
+      (r) => emit(UpdateProductSuccessState()),
+    );
+  }
+
+  @override
+  Future<void> close() {
+    logger.i("===== CLOSE ProductBloc =====");
+    return super.close();
+  }
+}
+</file>
+
+<file path="lib/src/features/product/presentation/bloc/product/product_event.dart">
+part of 'product_bloc.dart';
+
+sealed class ProductEvent extends Equatable {
+  const ProductEvent();
+
+  @override
+  List<Object> get props => [];
+}
+
+class GetProductListEvent extends ProductEvent {}
+
+class CreateProductEvent extends ProductEvent {
+  final String name;
+  final int price;
+  const CreateProductEvent({
+    required this.name,
+    required this.price,
+  });
+
+  @override
+  List<Object> get props => [name, price];
+}
+
+class UpdateProductEvent extends ProductEvent {
+  final String productId;
+  final String name;
+  final int price;
+  const UpdateProductEvent({
+    required this.productId,
+    required this.name,
+    required this.price,
+  });
+
+  @override
+  List<Object> get props => [
+        productId,
+        name,
+        price,
+      ];
+}
+
+class DeleteProductEvent extends ProductEvent {
+  final String productId;
+  const DeleteProductEvent({required this.productId});
+
+  @override
+  List<Object> get props => [productId];
+}
+</file>
+
+<file path="lib/src/features/product/presentation/bloc/product/product_state.dart">
+part of 'product_bloc.dart';
+
+sealed class ProductState extends Equatable {
+  const ProductState();
+
+  @override
+  List<Object> get props => [];
+}
+
+class ProductInitialState extends ProductState {}
+
+class GetProductListLoadingState extends ProductState {}
+
+class GetProductListSuccessState extends ProductState {
+  final List<ProductEntity> data;
+  const GetProductListSuccessState(this.data);
+
+  @override
+  List<Object> get props => [data];
+}
+
+class GetProductListFailureState extends ProductState {
+  final String message;
+  const GetProductListFailureState(this.message);
+
+  @override
+  List<Object> get props => [message];
+}
+
+class CreateProductLoadingState extends ProductState {}
+
+class CreateProductSuccessState extends ProductState {}
+
+class CreateProductFailureState extends ProductState {
+  final String message;
+  const CreateProductFailureState(this.message);
+
+  @override
+  List<Object> get props => [message];
+}
+
+class UpdateProductLoadingState extends ProductState {}
+
+class UpdateProductSuccessState extends ProductState {}
+
+class UpdateProductFailureState extends ProductState {
+  final String message;
+  const UpdateProductFailureState(this.message);
+
+  @override
+  List<Object> get props => [message];
+}
+
+class DeleteProductLoadingState extends ProductState {}
+
+class DeleteProductSuccessState extends ProductState {}
+
+class DeleteProductFailureState extends ProductState {
+  final String message;
+  const DeleteProductFailureState(this.message);
+
+  @override
+  List<Object> get props => [message];
+}
+</file>
+
+<file path="lib/src/features/product/presentation/bloc/product_form/product_form_state.dart">
+part of 'product_form_bloc.dart';
+
+sealed class ProductFormState extends Equatable {
+  final String name;
+  final String price;
+  final bool isValid;
+
+  const ProductFormState({
+    required this.name,
+    required this.price,
+    required this.isValid,
+  });
+
+  @override
+  List<Object> get props => [
+        name,
+        price,
+        isValid,
+      ];
+}
+
+class ProductFormInitialState extends ProductFormState {
+  const ProductFormInitialState()
+      : super(
+          name: "",
+          price: "0",
+          isValid: false,
+        );
+}
+
+class ProductFormDataState extends ProductFormState {
+  final String inputName;
+  final String inputPrice;
+  final bool inputIsValid;
+  const ProductFormDataState({
+    required this.inputName,
+    required this.inputPrice,
+    required this.inputIsValid,
+  }) : super(
+          name: inputName,
+          price: inputPrice,
+          isValid: inputIsValid,
+        );
+
+  @override
+  List<Object> get props => [
+        inputName,
+        inputPrice,
+        inputIsValid,
+      ];
+}
+</file>
+
+<file path="lib/src/features/product/presentation/widgets/create_product_input.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../bloc/product_form/product_form_bloc.dart';
+import 'product_text_field.dart';
+
+class CreateProductInputWidget extends StatelessWidget {
+  const CreateProductInputWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final formBloc = context.read<ProductFormBloc>();
+
+    return Column(
+      children: [
+        ProductTextField(
+          label: "nama_produk".tr(),
+          onChanged: (val) {
+            formBloc.add(ProductNameChangedEvent(val));
+          },
+          hinText: "input_nama_produk".tr(),
+        ),
+        ProductTextField(
+          label: "harga_produk".tr(),
+          onChanged: (val) {
+            formBloc.add(ProductPriceChangedEvent(val));
+          },
+          inputType: TextInputType.number,
+          inputFormat: [
+            FilteringTextInputFormatter.allow(RegExp("[0-9]")),
+          ],
+          hinText: "input_harga_produk".tr(),
+        ),
+        BlocSelector<ProductFormBloc, ProductFormState, String>(
+          selector: (state) => state.price,
+          builder: (_, state) {
+            final price = int.tryParse(state) ?? 0;
+            if (price > 0 && price <= 10000) {
+              return Chip(
+                label: Text("murah".tr()),
+                backgroundColor: Colors.green,
+              );
+            } else if (price > 10000 && price <= 100000) {
+              return Chip(
+                label: Text("sedang".tr()),
+                backgroundColor: Colors.orange,
+              );
+            } else if (price > 100000) {
+              return Chip(
+                label: Text("mahal".tr()),
+                backgroundColor: Colors.red,
+              );
+            }
+
+            return const SizedBox();
+          },
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/product/presentation/widgets/product_list_tile.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_ca/src/core/extensions/integer_sizedbox_extension.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../routes/app_route_path.dart';
+import '../../../../widgets/dialog_widget.dart';
+import '../../../../widgets/error_widget.dart';
+import '../../../../widgets/loading_widget.dart';
+import '../../../../widgets/snackbar_widget.dart';
+import '../bloc/product/product_bloc.dart';
+
+class ProductDataWidget extends StatelessWidget {
+  const ProductDataWidget({super.key});
+
+  Future<void> _openDeleteDialog(
+    BuildContext context,
+    String productId,
+  ) async {
+    final shouldDelete = await showDialog<bool>(
+      barrierDismissible: false,
+      context: context,
+      builder: (_) => AppDialog(title: "pesan_hapus_produk".tr()),
+    );
+
+    if (!context.mounted) return;
+    if (shouldDelete ?? false) {
+      context.read<ProductBloc>().add(
+            DeleteProductEvent(
+              productId: productId,
+            ),
+          );
+    }
+  }
+
+  Widget _priceChip(int price) {
+    if (price > 0 && price <= 10000) {
+      return Chip(
+        label: Text("murah".tr()),
+        backgroundColor: Colors.green,
+      );
+    } else if (price > 10000 && price <= 100000) {
+      return Chip(
+        label: Text("sedang".tr()),
+        backgroundColor: Colors.orange,
+      );
+    } else if (price > 100000) {
+      return Chip(
+        label: Text("mahal".tr()),
+        backgroundColor: Colors.red,
+      );
+    } else {
+      return const SizedBox();
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocConsumer<ProductBloc, ProductState>(
+      listenWhen: (_, current) {
+        return current is DeleteProductLoadingState ||
+            current is DeleteProductSuccessState ||
+            current is DeleteProductFailureState;
+      },
+      listener: (context, state) {
+        if (state is DeleteProductLoadingState) {
+          showDialog(
+            context: context,
+            builder: (_) => const AppLoadingWidget(),
+          );
+        } else if (state is DeleteProductSuccessState) {
+          context.pop();
+          context.read<ProductBloc>().add(GetProductListEvent());
+          appSnackBar(context, Colors.green, "Product deleted successfully");
+        } else if (state is DeleteProductFailureState) {
+          context.pop();
+          appSnackBar(
+            context,
+            Colors.red,
+            state.message,
+          );
+        }
+      },
+      buildWhen: (_, current) {
+        return current is ProductInitialState ||
+            current is GetProductListLoadingState ||
+            current is GetProductListFailureState ||
+            current is GetProductListSuccessState;
+      },
+      builder: (context, state) {
+        if (state is GetProductListLoadingState) {
+          return const AppLoadingWidget();
+        } else if (state is GetProductListFailureState) {
+          return AppErrorWidget(state.message);
+        } else if (state is GetProductListSuccessState) {
+          final products = state.data;
+
+          return ListView(
+            children: products
+                .map(
+                  (e) => ListTile(
+                    title: Text(e.name ?? ""),
+                    subtitle: Row(
+                      children: [
+                        Text(e.price.toString()),
+                        20.wS,
+                        _priceChip(e.price ?? 0),
+                      ],
+                    ),
+                    onTap: () {
+                      context.pushNamed(
+                        AppRoute.updateProduct.name,
+                        extra: context,
+                        pathParameters: {
+                          "product_id": e.productId ?? "",
+                          "product_name": e.name ?? "",
+                          "product_price": (e.price ?? 0).toString(),
+                        },
+                      );
+                    },
+                    trailing: IconButton(
+                      onPressed: () {
+                        _openDeleteDialog(
+                          context,
+                          e.productId ?? "",
+                        );
+                      },
+                      icon: const Icon(Icons.delete_rounded),
+                      color: Colors.red,
+                    ),
+                  ),
+                )
+                .toList(),
+          );
+        }
+
+        return const SizedBox();
+      },
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/product/presentation/widgets/product_text_field.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/themes/app_color.dart';
+
+class ProductTextField extends StatelessWidget {
+  final String hinText;
+  final String label;
+  final String? initialValue;
+  final TextInputType? inputType;
+  final List<TextInputFormatter>? inputFormat;
+  final void Function(String)? onChanged;
+  const ProductTextField({
+    super.key,
+    required this.hinText,
+    required this.label,
+    this.initialValue,
+    this.inputType,
+    this.inputFormat,
+    required this.onChanged,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: 15.w,
+        vertical: 10.h,
+      ),
+      child: TextFormField(
+        initialValue: initialValue,
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        cursorColor: AppColor.purple,
+        onChanged: onChanged,
+        keyboardType: inputType,
+        inputFormatters: inputFormat,
+        validator: (val) {
+          if (val!.length < 4) {
+            return "validasi_produk".tr(args: [label]);
+          }
+
+          return null;
+        },
+        decoration: InputDecoration(
+          hintText: hinText,
+          border: const OutlineInputBorder(),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColor.purple,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/product/presentation/widgets/update_product_input.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../bloc/product_form/product_form_bloc.dart';
+import 'product_text_field.dart';
+
+class UpdateProductInputWidget extends StatelessWidget {
+  final String productName;
+  final String productPrice;
+  const UpdateProductInputWidget({
+    super.key,
+    required this.productName,
+    required this.productPrice,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final formBloc = context.read<ProductFormBloc>();
+
+    return Column(
+      children: [
+        ProductTextField(
+          label: "nama_produk".tr(),
+          initialValue: productName,
+          onChanged: (val) {
+            formBloc.add(ProductNameChangedEvent(val));
+          },
+          hinText: "input_nama_produk".tr(),
+        ),
+        ProductTextField(
+          label: "harga_produk".tr(),
+          initialValue: productPrice,
+          onChanged: (val) {
+            formBloc.add(ProductPriceChangedEvent(val));
+          },
+          inputType: TextInputType.number,
+          inputFormat: [
+            FilteringTextInputFormatter.allow(RegExp("[0-9]")),
+          ],
+          hinText: "input_harga_produk".tr(),
+        ),
+        BlocSelector<ProductFormBloc, ProductFormState, String>(
+          selector: (state) => state.price,
+          builder: (_, state) {
+            final price = int.tryParse(state) ?? 0;
+            if (price > 0 && price <= 10000) {
+              return Chip(
+                label: Text("murah".tr()),
+                backgroundColor: Colors.green,
+              );
+            } else if (price > 10000 && price <= 100000) {
+              return Chip(
+                label: Text("sedang".tr()),
+                backgroundColor: Colors.orange,
+              );
+            } else if (price > 100000) {
+              return Chip(
+                label: Text("mahal".tr()),
+                backgroundColor: Colors.red,
+              );
+            }
+
+            return const SizedBox();
+          },
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/src/routes/app_route_path.dart">
+enum AppRoute {
+  auth(path: "/auth"),
+  login(path: "login"),
+  register(path: "register"),
+  home(path: "/home/:user_id/:email/:username"),
+  createProduct(path: "/product/add"),
+  updateProduct(path: "/product/update/:product_id/:product_name/:product_price");
+
+  final String path;
+  const AppRoute({required this.path});
+}
+</file>
+
+<file path="lib/src/widgets/button_widget.dart">
+import 'package:flutter/material.dart';
+
+class AppButtonWidget extends StatelessWidget {
+  final double? paddingHorizontal;
+  final double? paddingVertical;
+  final String label;
+  final VoidCallback? callback;
+  const AppButtonWidget({
+    super.key,
+    this.paddingHorizontal,
+    this.paddingVertical,
+    required this.label,
+    required this.callback,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: callback,
+      style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.symmetric(
+          horizontal: paddingHorizontal ?? 0,
+          vertical: paddingVertical ?? 0,
+        ),
+      ),
+      child: Text(label),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/widgets/dialog_widget.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+class AppDialog extends StatelessWidget {
+  final String title;
+  const AppDialog({
+    super.key,
+    required this.title,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      content: Text(title),
+      actions: [
+        ElevatedButton(
+          onPressed: () {
+            context.pop(false);
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.grey,
+          ),
+          child: Text("tombol_tidak".tr()),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            context.pop(true);
+          },
+          child: Text("tombol_ya".tr()),
+        ),
+      ],
+    );
+  }
+}
+</file>
+
+<file path="lib/src/widgets/error_widget.dart">
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class AppErrorWidget extends StatelessWidget {
+  final String message;
+  const AppErrorWidget(
+    this.message, {
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            Icons.error,
+            size: 40.r,
+          ),
+          Text(message),
+        ],
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/widgets/leading_back_button_widget.dart">
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+
+class AppBackButton extends StatelessWidget {
+  const AppBackButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        context.pop();
+      },
+      icon: const Icon(Icons.arrow_back_ios_new_rounded),
+      color: Colors.white,
+      splashRadius: 20.r,
+    );
+  }
+}
+</file>
+
+<file path="lib/src/widgets/loading_widget.dart">
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc_ca/src/core/themes/app_color.dart';
+
+class AppLoadingWidget extends StatelessWidget {
+  const AppLoadingWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: CircularProgressIndicator(
+        color: AppColor.purple,
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/widgets/snackbar_widget.dart">
+import 'package:flutter/material.dart';
+
+appSnackBar(BuildContext context, Color color, String label) =>
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(label),
+        backgroundColor: color,
+      ),
+    );
+</file>
+
+<file path=".gitignore">
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/google-services.json
+/android/app/debug
+/android/app/profile
+/android/app/release
+/lib/firebase_options.dart
+</file>
+
+<file path=".metadata">
+# This file tracks properties of this Flutter project.
+# Used by Flutter tool to assess capabilities and perform upgrades etc.
+#
+# This file should be version controlled and should not be manually edited.
+
+version:
+  revision: "db50e20168db8fee486b9abf32fc912de3bc5b6a"
+  channel: "stable"
+
+project_type: app
+
+# Tracks metadata for the flutter migrate command
+migration:
+  platforms:
+    - platform: root
+      create_revision: db50e20168db8fee486b9abf32fc912de3bc5b6a
+      base_revision: db50e20168db8fee486b9abf32fc912de3bc5b6a
+    - platform: web
+      create_revision: db50e20168db8fee486b9abf32fc912de3bc5b6a
+      base_revision: db50e20168db8fee486b9abf32fc912de3bc5b6a
+
+  # User provided section
+
+  # List of Local paths (relative to this file) that should be
+  # ignored by the migrate tool.
+  #
+  # Files that are not part of the templates will be ignored by default.
+  unmanaged_files:
+    - 'lib/main.dart'
+    - 'ios/Runner.xcodeproj/project.pbxproj'
+</file>
+
+<file path="analysis_options.yaml">
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at
+  # https://dart-lang.github.io/linter/lints/index.html.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
+    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
+</file>
+
+<file path="README.md">
+# Flutter Bloc Pattern with Clean Architecture and SOLID Principles
+
+## Description
+The "Flutter Bloc Pattern with Clean Architecture and SOLID Principles" project aims to develop a Flutter application that combines the robustness of the BLoC (Business Logic Component) pattern with the clarity of clean architecture principles and incorporates the SOLID principles for robust and maintainable code.
+
+Clean architecture provides a structured approach to organizing code, emphasizing the separation of concerns and maintaining a clear boundary between different layers. This project will adhere to clean architecture principles by dividing the application into distinct layers:
+
+- Presentation Layer: This layer will handle the UI components, user interactions, and visual elements. It will interact with the domain layer to retrieve and display data, and also communicate with the data layer to save or update information.
+
+- Domain Layer: The domain layer encapsulates the business logic and use cases of the application. It defines the core functionality and rules of the application, independent of any UI or data source. This layer will interact with the data layer through abstractions to retrieve and process data.
+
+- Data Layer: The data layer is responsible for interacting with external data sources, such as databases, APIs, or local storage. It will provide concrete implementations of the abstractions defined in the domain layer. The data layer will handle data retrieval, transformation, and persistence, ensuring a separation between data management and the business logic.
+
+By following clean architecture principles, this project will achieve a highly modular and maintainable codebase. Each layer will depend only on abstractions from lower layers, promoting loose coupling and making it easier to replace or modify components without impacting the entire application.
+
+Additionally, the project integrates the SOLID principles, which consist of the following:
+
+- Single Responsibility Principle (SRP): Ensures that each class has a single responsibility, enhancing code clarity and maintainability.
+- Open/Closed Principle (OCP): Allows for extending the functionality without modifying existing code, promoting code reuse and scalability.
+- Liskov Substitution Principle (LSP): Ensures that derived classes can be substituted for their base classes without affecting the correctness of the program.
+- Interface Segregation Principle (ISP): Encourages the creation of focused interfaces to prevent clients from depending on unnecessary functionalities.
+- Dependency Inversion Principle (DIP): Promotes loose coupling by depending on abstractions, facilitating flexibility and testability.
+By adhering to the SOLID principles, the project achieves code that is modular, reusable, and easier to understand and maintain.
+
+To support the project's implementation, popular packages such as "flutter_bloc" for BLoC pattern implementation, "equatable" for simplified equality comparisons, and "get_it" for dependency inversion and management will be integrated. These packages provide powerful tools and utilities to streamline development, improve code quality, and enhance maintainability.
+## Features
+- Authentication (Login, Register, Logout)
+- Product (List, Create, Update, Delete)
+- Multi Language (English, Indonesian)
+- Multi Theme (Light, Dark)
+- Validation (Form, Internet Connection)
+- Auto Login
+- Auto save theme mode and language preference
+- Offline data caching
+
+## Popular Packages Used
+- [flutter_bloc](https://pub.dev/packages/flutter_bloc) for BLoC pattern implementation
+- [equatable](https://pub.dev/packages/equatable) for simplified equality comparisons
+- [get_it](https://pub.dev/packages/get_it) for dependency inversion and management
+- [go_router](https://pub.dev/packages/go_router) for declarative routing
+- [hive](https://pub.dev/packages/hive) for lightweight and blazing fast key-value database
+- etc
+## Project Structure
+- lib
+  - src
+    - configs
+      - adapter
+      - injector
+    - core
+      - api
+      - blocs
+      - cache
+      - constant
+      - errors
+      - extensions
+      - network
+      - themes
+      - usecases
+      - utils
+    - features
+      - auth
+        - data
+          - datasources
+          - models
+          - repositories
+        - di
+        - domain
+          - entities
+          - repositories
+          - usecases
+        - presentation
+          - bloc
+          - pages
+          - widgets
+      - product
+        - data
+          - datasources
+          - models
+          - repositories
+        - di
+        - domain
+          - entities
+          - repositories
+          - usecases
+        - presentation
+          - bloc
+          - pages
+          - widgets
+    - routes
+    - widgets
+    - app.dart
+  - main.dart
+
+## How to run
+- Clone this repository
+- Open project directory in terminal or cmd
+- Run `flutter pub get`
+- Create firebase project
+- Create firestore database in firebase project
+- Edit security rules in firestore database to allow read and write without authentication
+```rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write;
+    }
+  }
+}
+```
+- Configure firebase to flutter project using flutterfire
+- Run `flutter run` or debug from IDE (remember to open simulator or connect physical device)
+
+## Feedback
+- I am very happy if you want to provide feedback or contribute to this project
+- If you have any questions, please contact me at yoga3911@gmail.com
+- If you think this project is useful, you can give me a cup of coffee (Just Kidding 😁)
+</file>
+
+<file path="android/gradle.properties">
+org.gradle.jvmargs=-Xmx1536M
+android.useAndroidX=true
+android.enableJetifier=true
+org.gradle.parallel=true
+org.gradle.caching=true
+</file>
+
+<file path="lib/src/features/product/presentation/bloc/product_form/product_form_bloc.dart">
+import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_ca/src/core/utils/logger.dart';
+
+part 'product_form_event.dart';
+part 'product_form_state.dart';
+
+class ProductFormBloc extends Bloc<ProductFormEvent, ProductFormState> {
+  ProductFormBloc() : super(const ProductFormInitialState()) {
+    on<ProductLoadDataEvent>(_loadData);
+    on<ProductNameChangedEvent>(_nameChanged);
+    on<ProductPriceChangedEvent>(_priceChanged);
+  }
+
+  Future _loadData(ProductLoadDataEvent event, Emitter emit) async {
+    emit(ProductFormDataState(
+      inputName: event.name,
+      inputPrice: event.price,
+      inputIsValid: inputValidator(event.name, event.price),
+    ));
+  }
+
+  Future _nameChanged(ProductNameChangedEvent event, Emitter emit) async {
+    emit(ProductFormDataState(
+      inputName: event.name,
+      inputPrice: state.price,
+      inputIsValid: inputValidator(event.name, state.price),
+    ));
+  }
+
+  Future _priceChanged(ProductPriceChangedEvent event, Emitter emit) async {
+    emit(ProductFormDataState(
+      inputName: state.name,
+      inputPrice: event.price,
+      inputIsValid: inputValidator(state.name, event.price),
+    ));
+  }
+
+  bool inputValidator(String name, String price) {
+    if (name.length > 3 && price.length > 3) {
+      return true;
+    }
+
+    return false;
+  }
+
+  @override
+  Future<void> close() {
+    logger.i("===== CLOSE ProductFormBloc =====");
+    return super.close();
+  }
+}
+</file>
+
+<file path="lib/src/features/product/presentation/bloc/product_form/product_form_event.dart">
+part of 'product_form_bloc.dart';
+
+sealed class ProductFormEvent extends Equatable {
+  const ProductFormEvent();
+
+  @override
+  List<Object> get props => [];
+}
+
+class ProductLoadDataEvent extends ProductFormEvent {
+  final String name;
+  final String price;
+  const ProductLoadDataEvent(this.name, this.price);
+
+  @override
+  List<Object> get props => [name, price];
+}
+
+class ProductNameChangedEvent extends ProductFormEvent {
+  final String name;
+  const ProductNameChangedEvent(this.name);
+
+  @override
+  List<Object> get props => [name];
+}
+
+class ProductPriceChangedEvent extends ProductFormEvent {
+  final String price;
+  const ProductPriceChangedEvent(this.price);
+
+  @override
+  List<Object> get props => [price];
+}
+</file>
+
+<file path="lib/src/features/product/presentation/pages/create_product_page.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../configs/injector/injector_conf.dart';
+import '../../../../core/blocs/theme/theme_bloc.dart';
+import '../../../../core/network/network_checker.dart';
+import '../../../../core/themes/app_color.dart';
+import '../../../../widgets/leading_back_button_widget.dart';
+import '../../../../widgets/snackbar_widget.dart';
+import '../bloc/product/product_bloc.dart';
+import '../bloc/product_form/product_form_bloc.dart';
+import '../widgets/create_product_input.dart';
+
+class CreateProductPage extends StatelessWidget {
+  final BuildContext ctx;
+  const CreateProductPage({
+    super.key,
+    required this.ctx,
+  });
+
+  Future<void> _createProduct(BuildContext context) async {
+    primaryFocus?.unfocus();
+    final formBloc = context.read<ProductFormBloc>().state;
+    if (formBloc.isValid) {
+      final network = getIt<NetworkInfo>();
+      final isConnected = await network.checkIsConnected;
+      if (!context.mounted) return;
+      if (isConnected) {
+        context.read<ProductBloc>().add(
+              CreateProductEvent(
+                name: formBloc.name.trim(),
+                price: int.parse(formBloc.price.trim()),
+              ),
+            );
+      } else {
+        appSnackBar(
+          context,
+          Colors.red,
+          "tidak_ada_internet".tr(),
+        );
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => getIt<ProductFormBloc>(),
+        ),
+        BlocProvider.value(
+          value: ctx.read<ProductBloc>(),
+        ),
+      ],
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("tambah_produk".tr()),
+          leading: const AppBackButton(),
+        ),
+        floatingActionButton: BlocConsumer<ProductBloc, ProductState>(
+          listener: (context, state) {
+            if (state is CreateProductSuccessState) {
+              context.pop();
+              context.read<ProductBloc>().add(GetProductListEvent());
+              appSnackBar(context, Colors.green, "Product added successfully");
+            } else if (state is CreateProductFailureState) {
+              appSnackBar(context, Colors.red, state.message);
+            }
+          },
+          builder: (context, state) {
+            if (state is CreateProductLoadingState) {
+              return FloatingActionButton(
+                onPressed: () {},
+                child: CircularProgressIndicator(
+                  color: context.read<ThemeBloc>().state.isDarkMode
+                      ? AppColor.lightPurple
+                      : AppColor.navy,
+                ),
+              );
+            }
+
+            return AnimatedSwitcher(
+              duration: const Duration(milliseconds: 500),
+              switchInCurve: Curves.easeInQuad,
+              switchOutCurve: Curves.easeOut,
+              child: context.watch<ProductFormBloc>().state.isValid
+                  ? FloatingActionButton(
+                      onPressed: () {
+                        _createProduct(context);
+                      },
+                      child: const Icon(Icons.save_rounded),
+                    )
+                  : const SizedBox(),
+            );
+          },
+        ),
+        body: const SingleChildScrollView(
+          child: CreateProductInputWidget(),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/features/product/presentation/pages/product_page.dart">
+import 'dart:async';
+
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../configs/injector/injector_conf.dart';
+import '../../../../core/blocs/theme/theme_bloc.dart';
+import '../../../../core/blocs/translate/translate_bloc.dart';
+import '../../../../core/constants/list_translation_locale.dart';
+import '../../../../core/network/network_checker.dart';
+import '../../../../routes/app_route_path.dart';
+import '../../../../widgets/dialog_widget.dart';
+import '../../../../widgets/loading_widget.dart';
+import '../../../../widgets/snackbar_widget.dart';
+import '../../../auth/domain/entities/user_entity.dart';
+import '../../../auth/presentation/bloc/auth/auth_bloc.dart';
+import '../bloc/product/product_bloc.dart';
+import '../widgets/product_list_tile.dart';
+
+class HomePage extends StatefulWidget {
+  final UserEntity user;
+  const HomePage({
+    super.key,
+    required this.user,
+  });
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  late ProductBloc _productBloc;
+  late Timer _timer;
+
+  @override
+  void initState() {
+    _productBloc = getIt<ProductBloc>()..add(GetProductListEvent());
+    final network = getIt<NetworkInfo>();
+    _timer = Timer.periodic(const Duration(seconds: 5), (_) {
+      unawaited(_checkInternetConnection(network));
+    });
+
+    super.initState();
+  }
+
+  Future<void> _checkInternetConnection(NetworkInfo network) async {
+    final event = await network.checkIsConnected;
+    if (!mounted) return;
+
+    if (network.getIsConnected != event) {
+      if (event && !network.getIsConnected) {
+        appSnackBar(
+          context,
+          Colors.green,
+          "ada_internet".tr(),
+        );
+        _productBloc.add(GetProductListEvent());
+      } else {
+        appSnackBar(
+          context,
+          Colors.red,
+          "tidak_ada_internet".tr(),
+        );
+      }
+    }
+    network.setIsConnected = event;
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
+
+  void _changeLanguage(BuildContext context, String languageCode) {
+    final trBloc = context.read<TranslateBloc>();
+    if (languageCode == "id") {
+      context.setLocale(englishLocale);
+      trBloc.add(TrEnglishEvent());
+    } else {
+      context.setLocale(indonesiaLocale);
+      trBloc.add(TrIndonesiaEvent());
+    }
+    context.read<ProductBloc>().add(
+          GetProductListEvent(),
+        );
+  }
+
+  void _changeTheme(BuildContext context) {
+    final themeBloc = context.read<ThemeBloc>();
+    if (themeBloc.state.isDarkMode) {
+      themeBloc.add(LightThemeEvent());
+    } else {
+      themeBloc.add(DarkThemeEvent());
+    }
+  }
+
+  Future<void> _logout(BuildContext context) async {
+    final shouldLogout = await showDialog<bool>(
+      barrierDismissible: false,
+      context: context,
+      builder: (_) => AppDialog(title: "pesan_keluar".tr()),
+    );
+
+    if (!context.mounted) return;
+    if (shouldLogout ?? false) {
+      context.read<AuthBloc>().add(AuthLogoutEvent());
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => _productBloc,
+        ),
+        BlocProvider(
+          create: (_) => getIt<AuthBloc>(),
+        ),
+      ],
+      child: BlocConsumer<AuthBloc, AuthState>(
+        listener: (context, state) {
+          if (state is AuthLogoutLoadingState) {
+            showDialog(
+              context: context,
+              builder: (_) => const AppLoadingWidget(),
+            );
+          } else if (state is AuthLogoutSuccessState) {
+            context.goNamed(AppRoute.login.name);
+            appSnackBar(context, Colors.green, state.message);
+          } else if (state is AuthLogoutFailureState) {
+            context.pop();
+            appSnackBar(context, Colors.red, state.message);
+          }
+        },
+        builder: (context, state) {
+          return Scaffold(
+            appBar: AppBar(
+              title: Text("hai".tr(args: [widget.user.username ?? ""])),
+              leading: BlocBuilder<TranslateBloc, TranslateState>(
+                builder: (_, state) {
+                  return IconButton(
+                    onPressed: () {
+                      _changeLanguage(context, state.languageCode);
+                    },
+                    icon: Text(state.previousCountryCode),
+                    splashRadius: 20.r,
+                  );
+                },
+              ),
+              actions: [
+                IconButton(
+                  onPressed: () {
+                    _logout(context);
+                  },
+                  splashRadius: 20.r,
+                  icon: const Icon(Icons.logout),
+                  color: Colors.white,
+                )
+              ],
+            ),
+            floatingActionButton: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 30.w),
+                  child: FloatingActionButton(
+                    heroTag: "theme",
+                    onPressed: () {
+                      _changeTheme(context);
+                    },
+                    child: Icon(
+                      context.read<ThemeBloc>().state.isDarkMode
+                          ? Icons.light_mode_rounded
+                          : Icons.dark_mode_rounded,
+                    ),
+                  ),
+                ),
+                FloatingActionButton.extended(
+                  heroTag: "add_product",
+                  onPressed: () => context.pushNamed(
+                    AppRoute.createProduct.name,
+                    extra: context,
+                  ),
+                  label: Text(
+                    "tambah_produk".tr(),
+                    style: TextStyle(
+                      color: context.read<ThemeBloc>().state.isDarkMode
+                          ? Colors.white
+                          : Colors.black,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            body: RefreshIndicator(
+              onRefresh: () async {
+                await Future.delayed(
+                  const Duration(seconds: 1),
+                );
+                if (!context.mounted) return;
+                context.read<ProductBloc>().add(
+                      GetProductListEvent(),
+                    );
+              },
+              child: const ProductDataWidget(),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/src/routes/app_route_conf.dart">
+import 'package:flutter/widgets.dart';
+import 'package:go_router/go_router.dart';
+
+import 'app_route_path.dart';
+import 'routes.dart';
+
+class AppRouteConf {
+  GoRouter get router => _router;
+
+  late final _router = GoRouter(
+    initialLocation: AppRoute.auth.path,
+    debugLogDiagnostics: true,
+    routes: [
+      GoRoute(
+        path: AppRoute.auth.path,
+        name: AppRoute.auth.name,
+        builder: (_, __) => const AuthPage(),
+        routes: [
+          GoRoute(
+            path: AppRoute.login.path,
+            name: AppRoute.login.name,
+            builder: (_, __) => const LoginPage(),
+          ),
+          GoRoute(
+            path: AppRoute.register.path,
+            name: AppRoute.register.name,
+            builder: (_, __) => const RegisterPage(),
+          ),
+        ],
+      ),
+      GoRoute(
+        path: AppRoute.home.path,
+        name: AppRoute.home.name,
+        builder: (_, state) {
+          final params = state.pathParameters;
+          final user = UserEntity(
+            username: params["username"],
+            email: params["email"],
+            userId: params["user_id"],
+          );
+
+          return HomePage(user: user);
+        },
+      ),
+      GoRoute(
+        path: AppRoute.createProduct.path,
+        name: AppRoute.createProduct.name,
+        builder: (_, state) {
+          final context = state.extra as BuildContext;
+
+          return CreateProductPage(ctx: context);
+        },
+      ),
+      GoRoute(
+        path: AppRoute.updateProduct.path,
+        name: AppRoute.updateProduct.name,
+        builder: (_, state) {
+          final context = state.extra as BuildContext;
+          final params = state.pathParameters;
+
+          final product = UpdateProductParams(
+            productId: params["product_id"] ?? "",
+            name: params["product_name"] ?? "",
+            price: int.tryParse(params["product_price"] ?? "") ?? 0,
+          );
+
+          return UpdateProductPage(
+            ctx: context,
+            productParams: product,
+          );
+        },
+      ),
+    ],
+  );
+}
+</file>
+
+<file path="lib/src/routes/routes.dart">
+export '../features/product/presentation/pages/create_product_page.dart';
+export '../features/product/presentation/pages/update_product_page.dart';
+export '../features/product/presentation/pages/product_page.dart';
+export '../features/product/domain/usecases/usecase_params.dart';
+export '../features/auth/presentation/pages/register_page.dart';
+export '../features/auth/presentation/pages/login_page.dart';
+export '../features/auth/presentation/pages/auth_page.dart';
+export '../features/auth/domain/entities/user_entity.dart';
+export '../core/cache/secure_local_storage.dart';
+export '../configs/injector/injector_conf.dart';
+</file>
+
+<file path="lib/src/app.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'configs/injector/injector_conf.dart';
+import 'core/blocs/theme/theme_bloc.dart';
+import 'core/blocs/translate/translate_bloc.dart';
+import 'core/themes/app_theme.dart';
+import 'features/auth/presentation/bloc/auth/auth_bloc.dart';
+import 'routes/app_route_conf.dart';
+import 'routes/app_route_path.dart';
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final router = getIt<AppRouteConf>().router;
+    return ScreenUtilInit(
+      useInheritedMediaQuery: true,
+      designSize: const Size(360, 800),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_, __) => GestureDetector(
+        onTap: () => primaryFocus?.unfocus(),
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (_) => getIt<ThemeBloc>(),
+            ),
+            BlocProvider(
+              create: (_) => getIt<TranslateBloc>(),
+            ),
+            BlocProvider(
+              create: (_) =>
+                  getIt<AuthBloc>()..add(AuthCheckSignInStatusEvent()),
+            ),
+          ],
+          child: BlocListener<AuthBloc, AuthState>(
+            listenWhen: (_, current) =>
+                current is AuthCheckSignInStatusSuccessState,
+            listener: (_, state) {
+              if (state is AuthCheckSignInStatusSuccessState) {
+                final user = state.data;
+                final userMap = {
+                  "user_id": user.userId ?? "",
+                  "email": user.email ?? "",
+                  "username": user.username ?? "",
+                };
+
+                router.goNamed(
+                  AppRoute.home.name,
+                  pathParameters: userMap,
+                );
+              }
+            },
+            child: BlocBuilder<ThemeBloc, ThemeState>(
+              builder: (_, state) {
+                return MaterialApp.router(
+                  debugShowCheckedModeBanner: false,
+                  localizationsDelegates: context.localizationDelegates,
+                  supportedLocales: context.supportedLocales,
+                  locale: context.locale,
+                  theme: AppTheme.data(state.isDarkMode),
+                  routerConfig: router,
+                );
+              },
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="pubspec.lock">
+# Generated by pub
+# See https://dart.dev/tools/pub/glossary#lockfile
+packages:
+  _flutterfire_internals:
+    dependency: transitive
+    description:
+      name: _flutterfire_internals
+      sha256: a742f71d7f3484253a623b30e19256aa4668ecbb3de6ad1beb0bcf8d4777ecd8
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.3"
+  args:
+    dependency: transitive
+    description:
+      name: args
+      sha256: eef6c46b622e0494a36c5a12d10d77fb4e855501a91c1b9ef9339326e58f0596
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.2"
+  async:
+    dependency: transitive
+    description:
+      name: async
+      sha256: "947bfcf187f74dbc5e146c9eb9c0f10c9f8b30743e341481c1e2ed3ecc18c20c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.11.0"
+  bloc:
+    dependency: transitive
+    description:
+      name: bloc
+      sha256: "3820f15f502372d979121de1f6b97bfcf1630ebff8fe1d52fb2b0bfa49be5b49"
+      url: "https://pub.dev"
+    source: hosted
+    version: "8.1.2"
+  boolean_selector:
+    dependency: transitive
+    description:
+      name: boolean_selector
+      sha256: "6cfb5af12253eaf2b368f07bacc5a80d1301a071c73360d746b7f2e32d762c66"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
+  characters:
+    dependency: transitive
+    description:
+      name: characters
+      sha256: faf38497bda5ead2a8c7615f4f7939df04333478bf32e4173fcb06d428b5716b
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.1"
+  clock:
+    dependency: transitive
+    description:
+      name: clock
+      sha256: fddb70d9b5277016c77a80201021d40a2247104d9f4aa7bab7157b7e3f05b84b
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.2"
+  cloud_firestore:
+    dependency: "direct main"
+    description:
+      name: cloud_firestore
+      sha256: "5bbc1f5bffa79af54ca035b92b57f81c6fb35ee5471ead67e29c8e12de8432f8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.8.2"
+  cloud_firestore_platform_interface:
+    dependency: transitive
+    description:
+      name: cloud_firestore_platform_interface
+      sha256: "8e0aafeb727087f84710275d59a101b2acf2290ffbb3b111aab70423f8350d5d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.15.2"
+  cloud_firestore_web:
+    dependency: transitive
+    description:
+      name: cloud_firestore_web
+      sha256: bbf0ebb9d1e9251caa00e8727389313c64cb4240c1c31f895971c52d0c782316
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.6.2"
+  collection:
+    dependency: transitive
+    description:
+      name: collection
+      sha256: "2f5709ae4d3d59dd8f7cd309b4e023046b57d8a6c82130785d2b0e5868084e76"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.19.1"
+  crypto:
+    dependency: transitive
+    description:
+      name: crypto
+      sha256: ff625774173754681d66daaf4a448684fb04b78f902da9cb3d308c19cc5e8bab
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.3"
+  dio:
+    dependency: "direct main"
+    description:
+      name: dio
+      sha256: a9d76e72985d7087eb7c5e7903224ae52b337131518d127c554b9405936752b8
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.2.1+1"
+  easy_localization:
+    dependency: "direct main"
+    description:
+      name: easy_localization
+      sha256: "2ccdf9db8fe4d9c5a75c122e6275674508fd0f0d49c827354967b8afcc56bbed"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.8"
+  easy_logger:
+    dependency: transitive
+    description:
+      name: easy_logger
+      sha256: c764a6e024846f33405a2342caf91c62e357c24b02c04dbc712ef232bf30ffb7
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
+  equatable:
+    dependency: "direct main"
+    description:
+      name: equatable
+      sha256: c2b87cb7756efdf69892005af546c56c0b5037f54d2a88269b4f347a505e3ca2
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.5"
+  fake_async:
+    dependency: transitive
+    description:
+      name: fake_async
+      sha256: "5368f224a74523e8d2e7399ea1638b37aecfca824a3cc4dfdf77bf1fa905ac44"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.3"
+  ffi:
+    dependency: transitive
+    description:
+      name: ffi
+      sha256: ed5337a5660c506388a9f012be0288fb38b49020ce2b45fe1f8b8323fe429f99
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
+  file:
+    dependency: transitive
+    description:
+      name: file
+      sha256: "1b92bec4fc2a72f59a8e15af5f52cd441e4a7860b49499d69dfa817af20e925d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.4"
+  firebase_core:
+    dependency: "direct main"
+    description:
+      name: firebase_core
+      sha256: a4a99204da264a0aa9d54a332ea0315ce7b0768075139c77abefe98093dd98be
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.14.0"
+  firebase_core_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_core_platform_interface
+      sha256: b63e3be6c96ef5c33bdec1aab23c91eb00696f6452f0519401d640938c94cba2
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.8.0"
+  firebase_core_web:
+    dependency: transitive
+    description:
+      name: firebase_core_web
+      sha256: "0fd5c4b228de29b55fac38aed0d9e42514b3d3bd47675de52bf7f8fccaf922fa"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.0"
+  flutter:
+    dependency: "direct main"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  flutter_bloc:
+    dependency: "direct main"
+    description:
+      name: flutter_bloc
+      sha256: e74efb89ee6945bcbce74a5b3a5a3376b088e5f21f55c263fc38cbdc6237faae
+      url: "https://pub.dev"
+    source: hosted
+    version: "8.1.3"
+  flutter_lints:
+    dependency: "direct dev"
+    description:
+      name: flutter_lints
+      sha256: "2118df84ef0c3ca93f96123a616ae8540879991b8b57af2f81b76a7ada49b2a4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
+  flutter_localizations:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  flutter_screenutil:
+    dependency: "direct main"
+    description:
+      name: flutter_screenutil
+      sha256: "8239210dd68bee6b0577aa4a090890342d04a136ce1c81f98ee513fc0ce891de"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.9.3"
+  flutter_secure_storage:
+    dependency: "direct main"
+    description:
+      name: flutter_secure_storage
+      sha256: "98352186ee7ad3639ccc77ad7924b773ff6883076ab952437d20f18a61f0a7c5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "8.0.0"
+  flutter_secure_storage_linux:
+    dependency: transitive
+    description:
+      name: flutter_secure_storage_linux
+      sha256: "0912ae29a572230ad52d8a4697e5518d7f0f429052fd51df7e5a7952c7efe2a3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.3"
+  flutter_secure_storage_macos:
+    dependency: transitive
+    description:
+      name: flutter_secure_storage_macos
+      sha256: "083add01847fc1c80a07a08e1ed6927e9acd9618a35e330239d4422cd2a58c50"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0"
+  flutter_secure_storage_platform_interface:
+    dependency: transitive
+    description:
+      name: flutter_secure_storage_platform_interface
+      sha256: b3773190e385a3c8a382007893d678ae95462b3c2279e987b55d140d3b0cb81b
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  flutter_secure_storage_web:
+    dependency: transitive
+    description:
+      name: flutter_secure_storage_web
+      sha256: "42938e70d4b872e856e678c423cc0e9065d7d294f45bc41fc1981a4eb4beaffe"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
+  flutter_secure_storage_windows:
+    dependency: transitive
+    description:
+      name: flutter_secure_storage_windows
+      sha256: fc2910ec9b28d60598216c29ea763b3a96c401f0ce1d13cdf69ccb0e5c93c3ee
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
+  flutter_test:
+    dependency: "direct dev"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  fpdart:
+    dependency: "direct main"
+    description:
+      name: fpdart
+      sha256: "4a0d047c3359a4bdd19e4941603bbe394bd133b3772a38049e17f9534d47106e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.0"
+  get_it:
+    dependency: "direct main"
+    description:
+      name: get_it
+      sha256: "529de303c739fca98cd7ece5fca500d8ff89649f1bb4b4e94fb20954abcd7468"
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.6.0"
+  go_router:
+    dependency: "direct main"
+    description:
+      name: go_router
+      sha256: b33a88c67816312597e5e0f5906c5139a0b9bd9bb137346e872c788da7af8ea0
+      url: "https://pub.dev"
+    source: hosted
+    version: "9.0.3"
+  google_fonts:
+    dependency: "direct main"
+    description:
+      name: google_fonts
+      sha256: "4e9391085e524954a51e3625b7c9c7e9851dc3f376603208bb45c24b9a66255d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "8.1.0"
+  hive:
+    dependency: "direct main"
+    description:
+      name: hive
+      sha256: "8dcf6db979d7933da8217edcec84e9df1bdb4e4edc7fc77dbd5aa74356d6d941"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.3"
+  hive_flutter:
+    dependency: "direct main"
+    description:
+      name: hive_flutter
+      sha256: dca1da446b1d808a51689fb5d0c6c9510c0a2ba01e22805d492c73b68e33eecc
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
+  http:
+    dependency: transitive
+    description:
+      name: http
+      sha256: "759d1a329847dd0f39226c688d3e06a6b8679668e350e2891a6474f8b4bb8525"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
+  http_parser:
+    dependency: transitive
+    description:
+      name: http_parser
+      sha256: "2aa08ce0341cc9b354a498388e30986515406668dbcc4f7c950c3e715496693b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.2"
+  hydrated_bloc:
+    dependency: "direct main"
+    description:
+      name: hydrated_bloc
+      sha256: "24994e61f64904d911683cce1a31dc4ef611619da5253f1de2b7b8fc6f79a118"
+      url: "https://pub.dev"
+    source: hosted
+    version: "9.1.2"
+  internet_connection_checker:
+    dependency: "direct main"
+    description:
+      name: internet_connection_checker
+      sha256: "1c683e63e89c9ac66a40748b1b20889fd9804980da732bf2b58d6d5456c8e876"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0+1"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      sha256: "3df61194eb431efc39c4ceba583b95633a403f46c9fd341e550ce0bfa50e9aa5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.20.2"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      sha256: f2c445dce49627136094980615a031419f7f3eb393237e4ecd97ac15dea343f3
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.7"
+  leak_tracker:
+    dependency: transitive
+    description:
+      name: leak_tracker
+      sha256: "33e2e26bdd85a0112ec15400c8cbffea70d0f9c3407491f672a2fad47915e2de"
+      url: "https://pub.dev"
+    source: hosted
+    version: "11.0.2"
+  leak_tracker_flutter_testing:
+    dependency: transitive
+    description:
+      name: leak_tracker_flutter_testing
+      sha256: "1dbc140bb5a23c75ea9c4811222756104fbcd1a27173f0c34ca01e16bea473c1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.10"
+  leak_tracker_testing:
+    dependency: transitive
+    description:
+      name: leak_tracker_testing
+      sha256: "8d5a2d49f4a66b49744b23b018848400d23e54caf9463f4eb20df3eb8acb2eb1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.2"
+  lints:
+    dependency: transitive
+    description:
+      name: lints
+      sha256: "0a217c6c989d21039f1498c3ed9f3ed71b354e69873f13a8dfc3c9fe76f1b452"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
+  logger:
+    dependency: "direct main"
+    description:
+      name: logger
+      sha256: "7ad7215c15420a102ec687bb320a7312afd449bac63bfb1c60d9787c27b9767f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.0"
+  logging:
+    dependency: transitive
+    description:
+      name: logging
+      sha256: "623a88c9594aa774443aa3eb2d41807a48486b5613e67599fb4c41c0ad47c340"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
+  matcher:
+    dependency: transitive
+    description:
+      name: matcher
+      sha256: dc0b7dc7651697ea4ff3e69ef44b0407ea32c487a39fff6a4004fa585e901861
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.12.19"
+  material_color_utilities:
+    dependency: transitive
+    description:
+      name: material_color_utilities
+      sha256: "9c337007e82b1889149c82ed242ed1cb24a66044e30979c44912381e9be4c48b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.13.0"
+  meta:
+    dependency: transitive
+    description:
+      name: meta
+      sha256: "23f08335362185a5ea2ad3a4e597f1375e78bce8a040df5c600c8d3552ef2394"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.17.0"
+  nested:
+    dependency: transitive
+    description:
+      name: nested
+      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  path:
+    dependency: transitive
+    description:
+      name: path
+      sha256: "75cca69d1490965be98c73ceaea117e8a04dd21217b37b292c9ddbec0d955bc5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.1"
+  path_provider:
+    dependency: "direct main"
+    description:
+      name: path_provider
+      sha256: "3087813781ab814e4157b172f1a11c46be20179fcc9bea043e0fba36bc0acaa2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.15"
+  path_provider_android:
+    dependency: transitive
+    description:
+      name: path_provider_android
+      sha256: "2cec049d282c7f13c594b4a73976b0b4f2d7a1838a6dd5aaf7bd9719196bee86"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.27"
+  path_provider_foundation:
+    dependency: transitive
+    description:
+      name: path_provider_foundation
+      sha256: "1995d88ec2948dac43edf8fe58eb434d35d22a2940ecee1a9fefcd62beee6eb3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.3"
+  path_provider_linux:
+    dependency: transitive
+    description:
+      name: path_provider_linux
+      sha256: ffbb8cc9ed2c9ec0e4b7a541e56fd79b138e8f47d2fb86815f15358a349b3b57
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.11"
+  path_provider_platform_interface:
+    dependency: transitive
+    description:
+      name: path_provider_platform_interface
+      sha256: "57585299a729335f1298b43245842678cb9f43a6310351b18fb577d6e33165ec"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.6"
+  path_provider_windows:
+    dependency: transitive
+    description:
+      name: path_provider_windows
+      sha256: "1cb68ba4cd3a795033de62ba1b7b4564dace301f952de6bfb3cd91b202b6ee96"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.7"
+  platform:
+    dependency: transitive
+    description:
+      name: platform
+      sha256: "4a451831508d7d6ca779f7ac6e212b4023dd5a7d08a27a63da33756410e32b76"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
+  plugin_platform_interface:
+    dependency: transitive
+    description:
+      name: plugin_platform_interface
+      sha256: "6a2128648c854906c53fa8e33986fc0247a1116122f9534dd20e3ab9e16a32bc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.4"
+  process:
+    dependency: transitive
+    description:
+      name: process
+      sha256: "53fd8db9cec1d37b0574e12f07520d582019cb6c44abf5479a01505099a34a09"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.2.4"
+  provider:
+    dependency: transitive
+    description:
+      name: provider
+      sha256: cdbe7530b12ecd9eb455bdaa2fcb8d4dad22e80b8afb4798b41479d5ce26847f
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.5"
+  shared_preferences:
+    dependency: transitive
+    description:
+      name: shared_preferences
+      sha256: "0344316c947ffeb3a529eac929e1978fcd37c26be4e8468628bac399365a3ca1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
+  shared_preferences_android:
+    dependency: transitive
+    description:
+      name: shared_preferences_android
+      sha256: fe8401ec5b6dcd739a0fe9588802069e608c3fdbfd3c3c93e546cf2f90438076
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
+  shared_preferences_foundation:
+    dependency: transitive
+    description:
+      name: shared_preferences_foundation
+      sha256: "0dc5c49ad8a05ed358b991b60c7b0ba1a14e16dae58af9b420d6b9e82dc024ab"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
+  shared_preferences_linux:
+    dependency: transitive
+    description:
+      name: shared_preferences_linux
+      sha256: "71d6806d1449b0a9d4e85e0c7a917771e672a3d5dc61149cc9fac871115018e1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
+  shared_preferences_platform_interface:
+    dependency: transitive
+    description:
+      name: shared_preferences_platform_interface
+      sha256: "23b052f17a25b90ff2b61aad4cc962154da76fb62848a9ce088efe30d7c50ab1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
+  shared_preferences_web:
+    dependency: transitive
+    description:
+      name: shared_preferences_web
+      sha256: "7347b194fb0bbeb4058e6a4e87ee70350b6b2b90f8ac5f8bd5b3a01548f6d33a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
+  shared_preferences_windows:
+    dependency: transitive
+    description:
+      name: shared_preferences_windows
+      sha256: f95e6a43162bce43c9c3405f3eb6f39e5b5d11f65fab19196cf8225e2777624d
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
+  sky_engine:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  source_span:
+    dependency: transitive
+    description:
+      name: source_span
+      sha256: dd904f795d4b4f3b870833847c461801f6750a9fa8e61ea5ac53f9422b31f250
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.9.1"
+  stack_trace:
+    dependency: transitive
+    description:
+      name: stack_trace
+      sha256: "8b27215b45d22309b5cddda1aa2b19bdfec9df0e765f2de506401c071d38d1b1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.12.1"
+  stream_channel:
+    dependency: transitive
+    description:
+      name: stream_channel
+      sha256: "969e04c80b8bcdf826f8f16579c7b14d780458bd97f56d107d3950fdbeef059d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.4"
+  string_scanner:
+    dependency: transitive
+    description:
+      name: string_scanner
+      sha256: "556692adab6cfa87322a115640c11f13cb77b3f076ddcc5d6ae3c20242bedcde"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0"
+  synchronized:
+    dependency: transitive
+    description:
+      name: synchronized
+      sha256: "5fcbd27688af6082f5abd611af56ee575342c30e87541d0245f7ff99faa02c60"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
+  term_glyph:
+    dependency: transitive
+    description:
+      name: term_glyph
+      sha256: a29248a84fbb7c79282b40b8c72a1209db169a2e0542bce341da992fe1bc7e84
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.1"
+  test_api:
+    dependency: transitive
+    description:
+      name: test_api
+      sha256: "8161c84903fd860b26bfdefb7963b3f0b68fee7adea0f59ef805ecca346f0c7a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.10"
+  typed_data:
+    dependency: transitive
+    description:
+      name: typed_data
+      sha256: facc8d6582f16042dd49f2463ff1bd6e2c9ef9f3d5da3d9b087e244a7b564b3c
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.2"
+  vector_math:
+    dependency: transitive
+    description:
+      name: vector_math
+      sha256: d530bd74fea330e6e364cda7a85019c434070188383e1cd8d9777ee586914c5b
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
+  vm_service:
+    dependency: transitive
+    description:
+      name: vm_service
+      sha256: "0016aef94fc66495ac78af5859181e3f3bf2026bd8eecc72b9565601e19ab360"
+      url: "https://pub.dev"
+    source: hosted
+    version: "15.2.0"
+  win32:
+    dependency: transitive
+    description:
+      name: win32
+      sha256: dfdf0136e0aa7a1b474ea133e67cb0154a0acd2599c4f3ada3b49d38d38793ee
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.5"
+  xdg_directories:
+    dependency: transitive
+    description:
+      name: xdg_directories
+      sha256: ee1505df1426458f7f60aac270645098d318a8b4766d85fde75f76f2e21807d1
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+sdks:
+  dart: ">=3.9.0 <4.0.0"
+  flutter: ">=3.35.0"
+</file>
+
+<file path="pubspec.yaml">
+name: flutter_bloc_ca
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.5 <4.0.0"
+
+dependencies:
+  cloud_firestore: ^4.8.2
+  dio: ^5.2.1+1
+  equatable: ^2.0.5
+  firebase_core: ^2.14.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.3
+  flutter_screenutil: ^5.9.3
+  fpdart: ^0.6.0
+  get_it: ^7.6.0
+  go_router: ^9.0.3
+  google_fonts: ^8.1.0
+  logger: ^1.4.0
+  internet_connection_checker: ^1.0.0+1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  flutter_secure_storage: ^8.0.0
+  hydrated_bloc: ^9.1.2
+  path_provider: ^2.0.15
+  easy_localization: ^3.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/translations/
+</file>
+
+<file path="lib/src/features/product/presentation/pages/update_product_page.dart">
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../configs/injector/injector_conf.dart';
+import '../../../../core/blocs/theme/theme_bloc.dart';
+import '../../../../core/network/network_checker.dart';
+import '../../../../core/themes/app_color.dart';
+import '../../../../widgets/leading_back_button_widget.dart';
+import '../../../../widgets/snackbar_widget.dart';
+import '../../domain/usecases/usecase_params.dart';
+import '../bloc/product/product_bloc.dart';
+import '../bloc/product_form/product_form_bloc.dart';
+import '../widgets/update_product_input.dart';
+
+class UpdateProductPage extends StatelessWidget {
+  final BuildContext ctx;
+  final UpdateProductParams productParams;
+  const UpdateProductPage({
+    super.key,
+    required this.ctx,
+    required this.productParams,
+  });
+
+  Future<void> _updateProduct(BuildContext context) async {
+    primaryFocus?.unfocus();
+    final formBloc = context.read<ProductFormBloc>().state;
+    if (formBloc.isValid) {
+      final network = getIt<NetworkInfo>();
+      final isConnected = await network.checkIsConnected;
+      if (!context.mounted) return;
+      if (isConnected) {
+        context.read<ProductBloc>().add(
+              UpdateProductEvent(
+                productId: productParams.productId,
+                name: formBloc.name.trim(),
+                price: int.parse(formBloc.price.trim()),
+              ),
+            );
+      } else {
+        appSnackBar(
+          context,
+          Colors.red,
+          "tidak_ada_internet".tr(),
+        );
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => getIt<ProductFormBloc>(),
+        ),
+        BlocProvider.value(
+          value: ctx.read<ProductBloc>(),
+        ),
+      ],
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("ubah_produk".tr()),
+          leading: const AppBackButton(),
+        ),
+        floatingActionButton: BlocBuilder<ProductFormBloc, ProductFormState>(
+          builder: (context, formState) {
+            if (formState is ProductFormInitialState) {
+              context.read<ProductFormBloc>().add(
+                    ProductLoadDataEvent(
+                        productParams.name, productParams.price.toString()),
+                  );
+            }
+
+            return BlocConsumer<ProductBloc, ProductState>(
+              listener: (context, state) {
+                if (state is UpdateProductSuccessState) {
+                  context.pop();
+                  context.read<ProductBloc>().add(GetProductListEvent());
+                  appSnackBar(
+                      context, Colors.green, "Product updated successfully");
+                } else if (state is UpdateProductFailureState) {
+                  appSnackBar(context, Colors.red, state.message);
+                }
+              },
+              builder: (context, state) {
+                if (state is UpdateProductLoadingState) {
+                  return FloatingActionButton(
+                    onPressed: () {},
+                    child: CircularProgressIndicator(
+                      color: context.read<ThemeBloc>().state.isDarkMode
+                          ? AppColor.lightPurple
+                          : AppColor.navy,
+                    ),
+                  );
+                }
+
+                return AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 500),
+                  switchInCurve: Curves.easeInQuad,
+                  switchOutCurve: Curves.easeOut,
+                  child: formState.isValid
+                      ? FloatingActionButton(
+                          onPressed: () {
+                            _updateProduct(context);
+                          },
+                          child: const Icon(Icons.save_rounded),
+                        )
+                      : const SizedBox(),
+                );
+              },
+            );
+          },
+        ),
+        body: SingleChildScrollView(
+          child: UpdateProductInputWidget(
+            productName: productParams.name,
+            productPrice: productParams.price.toString(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+</file>
+
+<file path="lib/main.dart">
+import "package:easy_localization/easy_localization.dart";
+import "package:firebase_core/firebase_core.dart";
+import "package:flutter/foundation.dart";
+import "package:flutter/material.dart";
+import "package:hive_flutter/hive_flutter.dart";
+import "package:hydrated_bloc/hydrated_bloc.dart";
+import "package:path_provider/path_provider.dart";
+
+import "firebase_options.dart";
+import "src/app.dart";
+import "src/configs/adapter/adapter_conf.dart";
+import "src/configs/injector/injector_conf.dart";
+import "src/core/constants/list_translation_locale.dart";
+import "src/core/utils/observer.dart";
+
+//Test
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
+  await Future.wait([
+    () async {
+      try {
+        await Firebase.initializeApp(
+          options: DefaultFirebaseOptions.currentPlatform,
+        );
+      } catch (e) {
+        debugPrint("Firebase.initializeApp failed: $e");
+      }
+    }(),
+    Hive.initFlutter(),
+    () async {
+      final storageDirectory = kIsWeb
+          ? HydratedStorage.webStorageDirectory
+          : await getTemporaryDirectory();
+      HydratedBloc.storage = await HydratedStorage.build(
+        storageDirectory: storageDirectory,
+      );
+    }(),
+  ]);
+
+  configureAdapter();
+
+  configureDepedencies();
+
+  Bloc.observer = AppBlocObserver();
+
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [indonesiaLocale, englishLocale],
+      path: "assets/translations",
+      startLocale: indonesiaLocale,
+      child: const MyApp(),
+    ),
+  );
+}
+</file>
+
+</files>
