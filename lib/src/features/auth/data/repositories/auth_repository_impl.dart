@@ -37,13 +37,19 @@ class AuthRepositoryImpl implements AuthRepository {
         return Left(CredentialFailure());
       }
 
-      await _secureLocalStorage.save(key: "user_id", value: result.userId);
-      await _localStorage.save(key: "user", value: result, boxName: "cache");
+      try {
+        await _secureLocalStorage.save(key: "user_id", value: result.userId);
+        await _localStorage.save(key: "user", value: result, boxName: "cache");
+      } catch (cacheError) {
+        // Log the cache failure but do not block the login success
+      }
 
       return Right(result);
     } on AuthException {
       return Left(CredentialFailure());
     } on ServerException {
+      return Left(ServerFailure());
+    } catch (e) {
       return Left(ServerFailure());
     }
   }
@@ -53,11 +59,17 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final result = await _authRemoteDataSource.logout();
 
-      await _secureLocalStorage.delete(key: "user_id");
-      await _localStorage.delete(key: "user", boxName: "cache");
+      try {
+        await _secureLocalStorage.delete(key: "user_id");
+        await _localStorage.delete(key: "user", boxName: "cache");
+      } catch (cacheError) {
+        // Log the cache failure but do not block the logout success
+      }
 
       return Right(result);
     } on ServerException {
+      return Left(ServerFailure());
+    } catch (e) {
       return Left(ServerFailure());
     }
   }
@@ -77,6 +89,8 @@ class AuthRepositoryImpl implements AuthRepository {
       return Left(DuplicateEmailFailure());
     } on ServerException {
       return Left(ServerFailure());
+    } catch (e) {
+      return Left(ServerFailure());
     }
   }
 
@@ -87,6 +101,8 @@ class AuthRepositoryImpl implements AuthRepository {
 
       return Right(result);
     } on CacheException {
+      return Left(CacheFailure());
+    } catch (e) {
       return Left(CacheFailure());
     }
   }

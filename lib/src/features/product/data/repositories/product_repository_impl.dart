@@ -36,6 +36,8 @@ class ProductRepositoryImpl implements ProductRepository {
       return Right(result);
     } on ServerException {
       return Left(ServerFailure());
+    } catch (e) {
+      return Left(ServerFailure());
     }
   }
 
@@ -46,14 +48,20 @@ class ProductRepositoryImpl implements ProductRepository {
         try {
           final listProduct = await _remoteDataSource.fetchProduct();
 
-          await _localStorage.save(
-            key: "products",
-            value: ProductModel.toMapList(listProduct),
-            boxName: "cache",
-          );
+          try {
+            await _localStorage.save(
+              key: "products",
+              value: ProductModel.toMapList(listProduct),
+              boxName: "cache",
+            );
+          } catch (cacheError) {
+            // Log local caching error but do not block product loading
+          }
 
           return Right(listProduct);
         } on ServerException {
+          return Left(ServerFailure());
+        } catch (e) {
           return Left(ServerFailure());
         }
       },
@@ -63,6 +71,8 @@ class ProductRepositoryImpl implements ProductRepository {
 
           return Right(listProduct);
         } on CacheException {
+          return Left(CacheFailure());
+        } catch (e) {
           return Left(CacheFailure());
         }
       },
@@ -81,6 +91,8 @@ class ProductRepositoryImpl implements ProductRepository {
       return Right(result);
     } on ServerException {
       return Left(ServerFailure());
+    } catch (e) {
+      return Left(ServerFailure());
     }
   }
 
@@ -97,6 +109,8 @@ class ProductRepositoryImpl implements ProductRepository {
 
       return Right(result);
     } on ServerException {
+      return Left(ServerFailure());
+    } catch (e) {
       return Left(ServerFailure());
     }
   }

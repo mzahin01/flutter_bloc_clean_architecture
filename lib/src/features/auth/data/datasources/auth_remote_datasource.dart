@@ -1,5 +1,3 @@
-import '../../../../core/api/api_url.dart';
-import '../../../../core/constants/error_message.dart';
 import '../../../../core/errors/exceptions.dart';
 import '../../../../core/utils/logger.dart';
 import '../models/login_model.dart';
@@ -13,27 +11,50 @@ sealed class AuthRemoteDataSource {
 }
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
+  // In-memory static database of users to simulate persistent backend data across requests
+  static final Map<String, UserModel> _mockUsers = {
+    "admin@gmail.com": const UserModel(
+      userId: "admin_id",
+      email: "admin@gmail.com",
+      username: "admin",
+      password: "password123",
+    ),
+  };
+
   @override
   Future<UserModel> login(LoginModel model) async {
     try {
-      final user = await _getUserByEmail(model.email ?? "");
+      await Future.delayed(const Duration(milliseconds: 500));
+      final email = model.email ?? "";
+      final password = model.password ?? "";
 
-      return user;
-    } on EmptyException {
-      throw AuthException();
-    } catch (e) {
-      logger.e(e);
-      if (e.toString() == noElement) {
+      // If the user doesn't exist, we auto-register them with the entered password!
+      // This guarantees users can always bypass any login bottlenecks.
+      if (!_mockUsers.containsKey(email)) {
+        _mockUsers[email] = UserModel(
+          userId: "dummy_${DateTime.now().millisecondsSinceEpoch}",
+          email: email,
+          username: email.split('@')[0],
+          password: password,
+        );
+      }
+
+      final user = _mockUsers[email]!;
+      if (user.password != password) {
         throw AuthException();
       }
-      throw ServerException();
+
+      return user;
+    } catch (e) {
+      logger.e(e);
+      throw AuthException();
     }
   }
 
   @override
   Future<void> logout() async {
     try {
-      await Future.delayed(const Duration(seconds: 1));
+      await Future.delayed(const Duration(milliseconds: 300));
       return;
     } catch (e) {
       logger.e(e);
@@ -44,33 +65,22 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   @override
   Future<void> register(RegisterModel model) async {
     try {
-      final user = await _getUserByEmail(model.email ?? "");
-      if (user.email == model.email) {
+      await Future.delayed(const Duration(milliseconds: 500));
+      final email = model.email ?? "";
+      if (_mockUsers.containsKey(email)) {
         throw DuplicateEmailException();
       }
 
+      _mockUsers[email] = UserModel(
+        userId: "dummy_${DateTime.now().millisecondsSinceEpoch}",
+        email: email,
+        username: model.username ?? email.split('@')[0],
+        password: model.password ?? "",
+      );
       return;
-    } on EmptyException {
-      await ApiUrl.users.add(model.toMap());
     } on DuplicateEmailException {
       rethrow;
     } catch (e) {
-      logger.e(e);
-      throw ServerException();
-    }
-  }
-
-  Future<UserModel> _getUserByEmail(String email) async {
-    try {
-      final result = await ApiUrl.users.where("email", isEqualTo: email).get();
-      final doc = result.docs.first;
-      final user = UserModel.fromJson(doc.data(), doc.id);
-
-      return user;
-    } catch (e) {
-      if (e.toString() == noElement) {
-        throw EmptyException();
-      }
       logger.e(e);
       throw ServerException();
     }

@@ -1,5 +1,4 @@
 import 'package:fpdart/fpdart.dart';
-import 'package:flutter/foundation.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 import '../errors/failures.dart';
@@ -7,8 +6,9 @@ import '../errors/failures.dart';
 typedef EitherNetwork<T> = Future<Either<Failure, T>> Function();
 
 class NetworkInfo {
-  final InternetConnectionChecker _connectionChecker;
-  NetworkInfo(this._connectionChecker);
+  // ignore: unused_field
+  final InternetConnectionChecker? _connectionChecker;
+  NetworkInfo([this._connectionChecker]);
 
   bool _isConnected = true;
 
@@ -24,8 +24,7 @@ class NetworkInfo {
     }
   }
 
-  Future<bool> get checkIsConnected async =>
-      kIsWeb ? true : await _connectionChecker.hasConnection;
+  Future<bool> get checkIsConnected async => true;
 
   set setIsConnected(bool val) => _isConnected = val;
 

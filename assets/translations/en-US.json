@@ -22,5 +22,10 @@
   "mahal": "Expensive",
   "validasi_produk": "{} mininum 4 characters",
   "nama_produk": "Product name",
-  "harga_produk": "Product price"
+  "harga_produk": "Product price",
+  "validation_username_empty": "Username cannot be empty",
+  "validation_email_invalid": "Invalid email format",
+  "validation_password_min": "Password must be at least 6 characters",
+  "validation_password_pattern": "Password must combine letters and numbers",
+  "validation_password_mismatch": "Passwords do not match"
 }

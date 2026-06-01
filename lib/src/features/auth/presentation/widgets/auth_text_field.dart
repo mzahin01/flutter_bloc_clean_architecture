@@ -54,23 +54,23 @@ class _AuthTextFieldState<T> extends State<AuthTextField<T>> {
         validator: (val) {
           if (formBloc is AuthRegisterFormBloc) {
             if (widget.label == "input_nama_pengguna".tr() && val == "") {
-              return "Username tidak boleh kosong";
+              return "validation_username_empty".tr();
             } else if (widget.label == "input_email".tr() &&
                 !formBloc.state.email.isEmailValid) {
-              return "Email tidak valid";
+              return "validation_email_invalid".tr();
             } else if ((widget.label == "input_kata_sandi".tr() ||
                     widget.label == "input_konfirmasi_kata_sandi".tr()) &&
                 val!.length < 6) {
-              return "Password minimal 6 karakter";
+              return "validation_password_min".tr();
             } else if (widget.label == "input_kata_sandi".tr() &&
                 !formBloc.state.password.isPasswordValid) {
-              return "Password harus kombinasi huruf dan angka";
+              return "validation_password_pattern".tr();
             } else if (widget.label == "input_konfirmasi_kata_sandi".tr() &&
                 !formBloc.state.confirmPassword.isPasswordValid) {
-              return "Password harus kombinasi huruf dan angka";
+              return "validation_password_pattern".tr();
             } else if (widget.label == "input_konfirmasi_kata_sandi".tr() &&
                 formBloc.state.password != formBloc.state.confirmPassword) {
-              return "Password tidak sama";
+              return "validation_password_mismatch".tr();
             }
           }
 

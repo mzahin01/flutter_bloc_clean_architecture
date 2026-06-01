@@ -82,6 +82,18 @@ class LoginPage extends StatelessWidget {
                       context.pushReplacementNamed(AppRoute.register.name);
                     },
                     child: Text("daftar".tr()),
+                  ),
+                  5.hS,
+                  TextButton(
+                    onPressed: () {
+                      context.read<AuthBloc>().add(
+                            const AuthLoginEvent(
+                              "guest@gmail.com",
+                              "password123",
+                            ),
+                          );
+                    },
+                    child: const Text("Bypass Login"),
                   )
                 ],
               ),

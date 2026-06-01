@@ -49,7 +49,7 @@ void main() async {
     EasyLocalization(
       supportedLocales: const [indonesiaLocale, englishLocale],
       path: "assets/translations",
-      startLocale: indonesiaLocale,
+      startLocale: englishLocale,
       child: const MyApp(),
     ),
   );
